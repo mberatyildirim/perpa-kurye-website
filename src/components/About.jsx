@@ -46,8 +46,8 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -126,11 +126,11 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6 text-center">
+            <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-6 sm:p-8 text-white">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">
                 Rakamlarla Perpa Kurye
               </h3>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -164,15 +164,15 @@ const About = () => {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
-                  <div className="flex items-center space-x-4">
+                  <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-3 sm:space-y-0">
                     <div className="flex-shrink-0">
                       <img 
                         src="/images/certifications/mkd-logo.png" 
                         alt="MKD Logo" 
-                        className="w-48 h-16 object-contain"
+                        className="w-full sm:w-48 h-16 object-contain"
                       />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 text-center sm:text-left">
                       <h5 className="font-semibold text-gray-900 mb-1">
                         MKD Üyesi
                       </h5>
@@ -199,15 +199,15 @@ const About = () => {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
-                  <div className="flex items-center space-x-4">
+                  <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-3 sm:space-y-0">
                     <div className="flex-shrink-0">
                       <img 
                         src="/images/certifications/turkish-cargo-logo.png" 
                         alt="Turkish Cargo Logo" 
-                        className="w-48 h-16 object-contain"
+                        className="w-full sm:w-48 h-16 object-contain"
                       />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 text-center sm:text-left">
                       <h5 className="font-semibold text-gray-900 mb-1">
                         Turkish Cargo
                       </h5>
