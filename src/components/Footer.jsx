@@ -195,20 +195,9 @@ const Footer = () => {
           viewport={{ once: true }}
           className="border-t border-gray-800 mt-12 pt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex justify-center items-center">
             <div className="text-gray-400 text-sm">
               © {currentYear} <strong>Perpa Kurye</strong> Tüm hakları saklıdır.
-            </div>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Gizlilik Politikası
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Kullanım Şartları
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                KVKK
-              </a>
             </div>
           </div>
         </motion.div>
