@@ -7,6 +7,7 @@ import About from './components/About'
 import Footer from './components/Footer'
 import ServiceDetail from './components/ServiceDetail'
 import RegionDetail from './components/RegionDetail'
+import CourierForm from './components/CourierForm'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -28,8 +29,14 @@ function App() {
   }
 
   const handleServiceClick = (service) => {
-    setSelectedService(service)
-    setCurrentPage('service-detail')
+    // Check if it's a courier form request
+    if (service === 'courier-form') {
+      setCurrentPage('courier-form')
+    } else {
+      // Handle other service details
+      setSelectedService(service)
+      setCurrentPage('service-detail')
+    }
   }
 
   const handleRegionClick = (region) => {
@@ -49,6 +56,8 @@ function App() {
         return <ServiceDetail service={selectedService} onBack={handleBack} />
       case 'region-detail':
         return <RegionDetail region={selectedRegion} onBack={handleBack} />
+      case 'courier-form':
+        return <CourierForm onBack={handleBack} />
       default:
         return (
           <>

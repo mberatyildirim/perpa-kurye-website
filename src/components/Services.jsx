@@ -1,51 +1,58 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Bike, Plane, Car, Package, Clock, Shield, MapPin, Zap } from 'lucide-react'
+import React from 'react' // Import React for component functionality
+import { motion } from 'framer-motion' // Import motion for animations
+import { Bike, Car, Package, Clock, Shield, MapPin, Zap, Send, Truck, Pill } from 'lucide-react' // Import icons for services
+import { sendPharmacyData, sendValetData } from '../utils/googleSheets' // Import Google Sheets functions
 
 const Services = ({ onServiceClick }) => {
+  // Define the three main services with their details
   const services = [
     {
-      icon: Bike,
-      title: 'Moto Kurye',
-      description: 'Evrak, küçük paket vb. gönderilerinizin bir bölgeden alınıp başka bir bölgeye teslim edildiği gönderi şeklidir.',
-      features: ['Hızlı teslimat', 'Ekonomik fiyat', 'Tüm İstanbul']
+      icon: Bike, // Icon for courier service
+      title: 'Kurye', // Service title
+      description: 'İstanbul\'un her noktasına hızlı ve güvenli kurye hizmeti. Evrak, paket ve kargo teslimatı.', // Service description
+      features: ['30 dk içinde teslimat', 'Sigortalı kargo', '7/24 hizmet'], // Key features
+      type: 'courier' // Service type for routing
     },
     {
-      icon: Car,
-      title: 'Arabalı Kurye',
-      description: 'Ebatlı ve hassas gönderileriniz güvenli bir şekilde vakit kaybetmeden yerine ulaştırılır.',
-      features: ['Büyük paketler', 'Hassas kargo', 'Güvenli taşıma']
+      icon: Pill, // Icon for pharmacy service
+      title: 'Eczaneden Getir', // Service title
+      description: 'İlaç ve sağlık ürünlerini en yakın eczaneden kapınıza kadar getiriyoruz.', // Service description
+      features: ['Hızlı teslimat', 'Güvenli taşıma', 'Reçeteli ilaç'], // Key features
+      type: 'pharmacy' // Service type for routing
     },
     {
-      icon: Plane,
-      title: 'Ucak Kurye',
-      description: 'Türkiye\'nin her yerine şehirlerarası uçak kargo ile en hızlı şekilde güvenilir teslimat.',
-      features: ['Şehirler arası', 'Hızlı teslimat', 'Güvenli kargo']
+      icon: Car, // Icon for valet service
+      title: 'Vale', // Service title
+      description: 'Aracınızı bulunduğu lokasyondan alıp, sizi istediğiniz lokasyona götürüyoruz ve size aracınızı teslim ediyoruz.', // Service description
+      features: ['Güvenli park', 'Hızlı teslim', 'Sigortalı hizmet'], // Key features
+      type: 'valet' // Service type for routing
     }
   ]
 
-  const features = [
-    {
-      icon: Clock,
-      title: '30 Dakika İçinde',
-      description: 'Kurye kapınızda'
-    },
-    {
-      icon: Shield,
-      title: 'Güvenli Teslimat',
-      description: 'Sigortalı kargo'
-    },
-    {
-      icon: MapPin,
-      title: 'Tüm İstanbul',
-      description: 'Her noktaya hizmet'
-    },
-    {
-      icon: Zap,
-      title: '7/24 Hizmet',
-      description: 'Gece gündüz yanınızdayız'
+  // Function to handle service button clicks
+  const handleServiceClick = async (service) => {
+    if (service.type === 'courier') {
+      // Navigate to courier form page
+      onServiceClick('courier-form')
+    } else {
+      // Send data to Google Sheets based on service type
+      try {
+        if (service.type === 'pharmacy') {
+          await sendPharmacyData(service.title) // Send pharmacy data
+        } else if (service.type === 'valet') {
+          await sendValetData(service.title) // Send valet data
+        }
+      } catch (error) {
+        console.error('Error sending data to Google Sheets:', error) // Log error but continue
+      }
+
+      // Send WhatsApp message for pharmacy and valet services
+      const message = `Merhaba! ${service.title} hizmeti almak istiyorum.`
+      const encodedMessage = encodeURIComponent(message)
+      const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}`
+      window.open(whatsappUrl, '_blank')
     }
-  ]
+  }
 
   return (
     <section id="services" className="py-20 bg-white">
@@ -62,7 +69,7 @@ const Services = ({ onServiceClick }) => {
             Hizmetlerimiz
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            İstanbul'un her noktasında profesyonel kurye hizmeti sunuyoruz. 
+            İstanbul'un her noktasında profesyonel hizmet sunuyoruz. 
             İhtiyacınıza uygun çözümü seçin.
           </p>
         </motion.div>
@@ -70,24 +77,16 @@ const Services = ({ onServiceClick }) => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
-            <motion.button
+            <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="card group hover:scale-105 transition-transform duration-300 w-full text-left overflow-hidden"
-              onClick={() => {
-                const serviceMap = {
-                  'Moto Kurye': 'city-courier',
-                  'Arabalı Kurye': 'intercity-courier',
-                  'Ucak Kurye': 'air-cargo'
-                }
-                onServiceClick(serviceMap[service.title])
-              }}
+              className="card group hover:scale-105 transition-transform duration-300 w-full text-left overflow-hidden flex flex-col h-full"
             >
               {/* Service Image */}
-              <div className="relative h-48 mb-6 overflow-hidden rounded-lg">
+              <div className="relative h-32 mb-6 overflow-hidden rounded-lg">
                 <img 
                   src={`/images/services/${service.title.toLowerCase().replace(' ', '-')}.jpg`}
                   alt={service.title}
@@ -101,23 +100,26 @@ const Services = ({ onServiceClick }) => {
                 </div>
               </div>
               
-              <div className="px-6 pb-6 space-y-4">
-                <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              <div className="px-6 pb-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                </div>
+                
+                {/* Service Button - Fixed at bottom */}
+                <button
+                  onClick={() => handleServiceClick(service)}
+                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 mt-6"
+                >
+                  <Send className="h-4 w-4" />
+                  <span>Fiyat Al</span>
+                </button>
               </div>
-            </motion.button>
+            </motion.div>
           ))}
         </div>
 
-        {/* Features */}
+        {/* Features Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -135,22 +137,65 @@ const Services = ({ onServiceClick }) => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
-                  <feature.icon className="h-6 w-6" />
-                </div>
-                <h4 className="font-bold text-lg mb-2">{feature.title}</h4>
-                <p className="text-primary-100 text-sm">{feature.description}</p>
-              </motion.div>
-            ))}
+            {/* Feature 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
+                <Clock className="h-6 w-6" />
+              </div>
+              <h4 className="font-bold text-lg mb-2">30 Dakika İçinde</h4>
+              <p className="text-primary-100 text-sm">Kurye kapınızda</p>
+            </motion.div>
+
+            {/* Feature 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
+                <Shield className="h-6 w-6" />
+              </div>
+              <h4 className="font-bold text-lg mb-2">Güvenli Teslimat</h4>
+              <p className="text-primary-100 text-sm">Sigortalı kargo</p>
+            </motion.div>
+
+            {/* Feature 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
+                <MapPin className="h-6 w-6" />
+              </div>
+              <h4 className="font-bold text-lg mb-2">Tüm İstanbul</h4>
+              <p className="text-primary-100 text-sm">Her noktaya hizmet</p>
+            </motion.div>
+
+            {/* Feature 4 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
+                <Zap className="h-6 w-6" />
+              </div>
+              <h4 className="font-bold text-lg mb-2">7/24 Hizmet</h4>
+              <p className="text-primary-100 text-sm">Gece gündüz yanınızdayız</p>
+            </motion.div>
           </div>
         </motion.div>
       </div>

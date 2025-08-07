@@ -1,0 +1,3314 @@
+[
+  {
+    "mahalle": "Atakent",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Adnan Kahveci",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Zafer",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Zümrütevler",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Halkalı Merkez",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Kayabaşı",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Karadeniz",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "İnönü",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "50. Yıl",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Kocasinan Merkez",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Yeşilkent",
+    "ilce": "Avcılar"
+  },
+  {
+    "mahalle": "Soğanlı",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Başak",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Kanarya",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Siyavuşpaşa",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Esentepe",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Cihangir",
+    "ilce": "Avcılar"
+  },
+  {
+    "mahalle": "Bahçelievler",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Cebeci",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Kavakpınar",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Fındıklı",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Başakşehir",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Yenişehir",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Şirinevler",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Güvercintepe",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Aydınlı",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Demirkapı",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "İsmetpaşa",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Mehmet Akif",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Tahtakale",
+    "ilce": "Avcılar"
+  },
+  {
+    "mahalle": "Yıldırım",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Barış",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Güneştepe",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "15 Temmuz",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Barbaros Hayrettin Paşa",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "100. Yıl",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Kaynarca",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Hürriyet",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Hürriyet",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "İstiklal",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Kazım Karabekir",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Yunus Emre",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Turgut Reis",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Güneşli",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Denizköşkler",
+    "ilce": "Avcılar"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Oruçreis",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Kartaltepe",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Yakuplu",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Kirazlı",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Nine Hatun",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Atatürk",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Bağlarbaşı",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Uğur Mumcu",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Uğur Mumcu",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Bahçeşehir 2. Kısım",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Gümüşpala",
+    "ilce": "Avcılar"
+  },
+  {
+    "mahalle": "Akşemsettin",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Karayolları",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Gençosman",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Yıldıztepe",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Sultançiftliği",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Yeşilpınar",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Ambarlı",
+    "ilce": "Avcılar"
+  },
+  {
+    "mahalle": "Hamidiye",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "İstasyon",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Kartaltepe",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Göztepe",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Telsiz",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Armağanevler",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Çakmak",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Fevzi Çakmak",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Tevfikbey",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Sümer",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Çınar",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Pınar",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Velibaba",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Mehterçeşme",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Kazım Karabekir",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Fevzi Çakmak",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Cevizli",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Ayazağa",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Göztepe",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Yenimahalle",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Gazi",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Kemalpaşa",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Güzeltepe",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Yavuztürk",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Havaalanı",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Kozyatağı",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Ünalan",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Şahintepe",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Muratpaşa",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Fevzi Çakmak",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Güzelyalı",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Çobançeşme",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Tuna",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Söğütlü Çeşme",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Anadolu",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Merdivenköy",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Talatpaşa",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Yeşilova",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Menderes",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Çeliktepe",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "75. Yıl",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Zübeyde Hanım",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Battalgazi",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Yeşilkent",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Abdurrahmangazi",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Esenler",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Çamçeşme",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Bostancı",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Mehmet Akif",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Atalar",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Erenköy",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Karlıktepe",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Sahrayıcedit",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Kurtköy",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Bulgurlu",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Acıbadem",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Altıntepe",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "19 Mayıs",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Altayçeşme",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Gültepe",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Çağlayan",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Gürsel",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Cennet",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Orhantepe",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Osmangazi",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "İnkılap",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Hamidiye",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Abdurrahmangazi",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Ahmet Yesevi",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Çırpıcı",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Namık Kemal",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Bağlarbaşı",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Süleymaniye",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Yavuz Selim",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Petrol İş",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Hürriyet",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Kazım Karabekir",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Atatürk",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Çırçır",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Bağlarçeşme",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Birlik",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Altıntepsi",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Şifa",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Altınşehir",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Şenlikköy",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Çınar",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Orhangazi",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Veliefendi",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Kavaklı",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Mehmet Akif",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Nuripaşa",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Cevizli",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Hamidiye",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Necip Fazıl",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Karadolap",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Esenevler",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Esentepe",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Yayla",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Balıkyolu",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Seyyid Ömer",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Ahmet Yesevi",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Soğanlık Yeni",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Marmara",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Gümüşpınar",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Fevzi Çakmak",
+    "ilce": "Bahçelievler"
+  },
+  {
+    "mahalle": "Talatpaşa",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Site",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Nurtepe",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Meclis",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Yıldıztabya",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Dumlupınar",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "İncirtepe",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Üçevler",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Fevzi Çakmak",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Hürriyet",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Sarıgöl",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Mehmet Akif",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Akşemsettin",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Hürriyet",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Acıbadem",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Atatürk",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "İnönü",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Hırka-İ Şerif",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Mahmutbey",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Bahçeşehir 1. Kısım",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Feneryolu",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "İnönü",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Ataköy 7-8-9-10. Kısım",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Şemsipaşa",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Emek",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Mimar Sinan",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Osmaniye",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Seyitnizam",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Mimar Sinan",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Turgut Özal",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Aydıntepe",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Caferağa",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Beştelsiz",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Mevlana",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Yeşilköy",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Merkezefendi",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Sülüntepe",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Piyalepaşa",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Gülbahar",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Yenigün",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Ortabayır",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Mecidiye",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Mehmet Akif Ersoy",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "İnönü",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Fevzi Çakmak",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Abdurrahman Nafiz Gürman",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Selahaddin Eyyubi",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Seyrantepe",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Firuzköy",
+    "ilce": "Avcılar"
+  },
+  {
+    "mahalle": "Suadiye",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Çamlık",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Kavacık",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Elmalıkent",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Cemil Meriç",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Şehremini",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Kemer",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Harmantepe",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "İdealtepe",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Barbaros",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Koca Mustafapaşa",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Saadetdere",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Şirintepe",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Sarıgazi",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Esenkent",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Yeşiltepe",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Başıbüyük",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Üniversite",
+    "ilce": "Avcılar"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Hadımköy",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Valide-İ Atik",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Kocatepe",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Namık Kemal",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Haznedar",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Bahçelievler",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Atakent",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Ziya Gökalp",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Çubuklu",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Akıncılar",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Barbaros Hayrettin Paşa",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Zuhuratbaba",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Yenikent",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Mehmet Akif Ersoy",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Akpınar",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Adil",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Büyükşehir",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Yunus Emre",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Çamlık",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Hürriyet",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Ferah",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Mevlanakapı",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Yukarı Dudullu",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Mecidiyeköy",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Hürriyet",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Turgut Reis",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Yenidoğan",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Aydınevler",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Tatlısu",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Esentepe",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Gökalp",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Esenkent",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "İstasyon",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Çınar",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Kaptanpaşa",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Kısıklı",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Küçüksu",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Postane",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Gürpınar",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Veysel Karani",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Sancaktepe",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Karlıtepe",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Yavuz Selim",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Kemal Türkler",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Akçaburgaz",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Esenşehir",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Cevatpaşa",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Tozkoparan",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Feyzullah",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Mahmut Şevket Paşa",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Eyüp Sultan",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Zekeriyaköy",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "İslambey",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Orta",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Yunus Emre",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Atatürk",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Paşa",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Yenidoğan",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Arnavutköy Merkez",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Derviş Ali",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Örnek",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Çınardere",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Düğmeciler",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Pınartepe",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Safa",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Mimaroba",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Caddebostan",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Molla Gürani",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Yavuz Sultan Selim",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Merve",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Mimar Sinan",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Barbaros",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "İncirköy",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "İstiklal",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Tarabya",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Güven",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Reşitpaşa",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Ayvansaray",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Yahya Kemal",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Fenerbahçe",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Adem Yavuz",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Küplüce",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Hasanpaşa",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Yedikule",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Fulya",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Sultaniye",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Kazım Karabekir",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Necip Fazıl Kısakürek",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "İcadiye",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Sümbül Efendi",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Halide Edip Adıvar",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Burhaniye",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Dikilitaş",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Silivrikapı",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Davutpaşa",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Şeyhli",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "İskenderpaşa",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Aydınlar",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Namık Kemal",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Ihlamurkuyu",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Yakacık Çarşı",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Yakacık Yeni",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Nişancı",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Girne",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "İstinye",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Yunus Emre",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Doğu",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Çamlık",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Aşık Veysel",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Necip Fazıl",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Şehitler",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Mevlana",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Fatih Sultan Mehmet",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Orhangazi",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Ulus",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Terazidere",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Kuştepe",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Piripaşa",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Bağlar",
+    "ilce": "Bağcılar"
+  },
+  {
+    "mahalle": "Murat Çesme",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Battalgazi",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Hasanpaşa",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Batı",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Fetihtepe",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Yeniköy",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Sultançiftliği",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Tokatköy",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Gülensu",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Hacıahmet",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Parseller",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Konaklar",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "İslambey",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Gülsuyu",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Yeni",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Yunus",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Ferahevler",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Atikali",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Topağacı",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Ortamahalle",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Altınşehir",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Sinanoba",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Zeyrek",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Kemalpaşa",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Rami Cuma",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Feriköy",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "İsmet Paşa",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Ertuğrul Gazi",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Gayrettepe",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Keçeci Piri",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Madenler",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Çengelköy",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Çavuşoğlu",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Rasimpaşa",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Gümüşsuyu",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Yamanevler",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Muratreis",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Esenyalı",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Rami Yeni",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Altunizade",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Güllü Bağlar",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Gültepe",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Balat",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Sultan Murat",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Ataköy 2-5-6. Kısım",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Mevlana",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Tepeüstü",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Güzeltepe",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Eğitim",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Sanayi",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Malkoçoğlu",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Kirazlıtepe",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Halıcıoğlu",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Selami Ali",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Maden",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Türkoba",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Mimar Sinan",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Atatürk",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Dumlupınar",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Yalı",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Merkez",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Mehmet Akif Ersoy",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Pazariçi",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Aşağı Dudullu",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Mustafa Kemal Paşa",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Akşemsettin",
+    "ilce": "Sultanbeyli"
+  },
+  {
+    "mahalle": "Zeynep Kamil",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Sütlüce",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Nisbetiye",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Bahçelievler",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Topselvi",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Kartaltepe",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Eskişehir",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Mimar Sinan",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Ekinoba",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Etiler",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Huzur",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Yeşilce",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Zafer",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Yayalar",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Telsizler",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Aksaray",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Dereağzı",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Karagümrük",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Pınar",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Çiğdem",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Teşvikiye",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Yayla",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Yalı",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "19 Mayıs",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Sultantepe",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Topkapı",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Piri Reis",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Haseki Sultan",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Kordonboyu",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Sapan Bağları",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Ali Kuşçu",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Yavuz Selim",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Soğuksu",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Dumlupınar",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Bozkurt",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Küçük Çamlıca",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Yenidoğan",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Evliya Çelebi",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Rumeli Hisarı",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Mecidiye",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Örnektepe",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "İçmeler",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Orhan Gazi",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Yarımburgaz",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Orta",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Türkali",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Akevler",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Nişantepe",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Mehmet Nesih Özmen",
+    "ilce": "Güngören"
+  },
+  {
+    "mahalle": "Esenkent",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Kadımehmet Efendi",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "İmrahor",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Göztepe",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Vatan",
+    "ilce": "Bayrampaşa"
+  },
+  {
+    "mahalle": "Tantavi",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Sakarya",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Boğazköy İstiklal",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Kulaksız",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Alibeyköy",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Ortaköy",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Salacak",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Ahmediye",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Darüşşafaka",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Emniyettepe",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Küçük Piyale",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Silahtarağa",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Cerrahpaşa",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Fikirtepe",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Emirgan",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Kirazlıdere",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Aziz Mahmut Hüdayi",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Yenidoğan",
+    "ilce": "Gaziosmanpaşa"
+  },
+  {
+    "mahalle": "Büyükdere",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Mimar Sinan Merkez",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Selimiye",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Çavuş",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Hekimbaşı",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Osmanağa",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Şerifali",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Emniyet Evleri",
+    "ilce": "Kağıthane"
+  },
+  {
+    "mahalle": "Çatalmeşe",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Nenehatun",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "19 Mayıs",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Karlıbayır",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Haraççı",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Güngören",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Hastane",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Kazım Karabekir Paşa",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Uskumruköy",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Ataköy 3-4-11. Kısım",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Yukarı",
+    "ilce": "Kartal"
+  },
+  {
+    "mahalle": "Sakızağacı",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Duatepe",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Zühtüpaşa",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Maslak",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Yayla",
+    "ilce": "Sultangazi"
+  },
+  {
+    "mahalle": "Ortaçeşme",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Cibali",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "İzzet Paşa",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Rüzgarlıbahçe",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Huzur",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Soğukpınar",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Harmandere",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Meşrutiyet",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Koşuyolu",
+    "ilce": "Kadıköy"
+  },
+  {
+    "mahalle": "Yeşilyurt",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Büyükbakkalköy",
+    "ilce": "Maltepe"
+  },
+  {
+    "mahalle": "Atatürk",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Mavigöl",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Taşdelen",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Acarlar",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Ulus",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Ekşioğlu",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Esentepe",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Kireçburnu",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Dizdariye",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Bolluca",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Yenimahalle",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Nişanca",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Kumburgaz",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Güzelce",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Ömerli",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Kamiloba",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Vişnezade",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Poligon",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Tepeören",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Alemdağ",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Akşemseddin",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Çamlıbahçe",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Yeşilbağlar",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Yıldız",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Levazım",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Çamlıtepe",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Basınköy",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Orta",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Bebek",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Yenişehir",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Beylerbeyi",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Celaliye",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Yalıköy",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Hilal",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Ptt Evleri",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Zeytinlik",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Cevizlik",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Çiftlik",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Abbasağa",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Cami",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Tayakadın",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Baltalimanı",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Mithatpaşa",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Koza",
+    "ilce": "Esenyurt"
+  },
+  {
+    "mahalle": "Çakmaklı",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Çayırbaşı",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Yavuz Selim",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Muradiye",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Çengeldere",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Kültür",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Mimar Sinan",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Deliklikaya",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Defterdar",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Topçular",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Alkent 2000",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Mescit",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Halil Rıfat Paşa",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Rumelifeneri",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Kocataş",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "İstiklal",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Sahil",
+    "ilce": "Beylikdüzü"
+  },
+  {
+    "mahalle": "Sururi Mehmet Efendi",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Kuzguncuk",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Kanlıca",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Gümüşdere",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Beşyol",
+    "ilce": "Küçükçekmece"
+  },
+  {
+    "mahalle": "Ömerli",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Firuzağa",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "İnönü",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Örnekköy",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Fatih Sultan Mehmet",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Arnavutköy",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Cihannüma",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Paşabahçe",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Balmumcu",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Bülbül",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Bahçeköy Merkez",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Yavuz Selim",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Rumeli Kavağı",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Yahya Kahya",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Pirinççi",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Cihangir",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Yeni",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Bahçelievler",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Sanayi",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Balibey",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Kumköy",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Kaptanpaşa",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Levent",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Kalyoncu Kulluğu",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Hicret",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Kuruçeşme",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Katip Kasım",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Baklacı",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Elmalı",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Ramazanoğlu",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Camiikebir",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Göksu",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Çukur",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Akbaba",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Ergenekon",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Tomtom",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Anadolu Hisarı",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Küçük Ayasofya",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Maltepe",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Muhsine Hatun",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Çifte Havuzlar",
+    "ilce": "Esenler"
+  },
+  {
+    "mahalle": "Şehsuvar Bey",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Sinanpaşa",
+    "ilce": "Beşiktaş"
+  },
+  {
+    "mahalle": "Karaağaç",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Çatma Mescit",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Harbiye",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Kılıçali Paşa",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Akfırat",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Bostan",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Saray",
+    "ilce": "Ümraniye"
+  },
+  {
+    "mahalle": "Kuleli",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Riva",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Kocatepe",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Reşadiye",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Gümüşsuyu",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Anadolu Kavağı",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Ömer Avni",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Kazlıçeşme",
+    "ilce": "Zeytinburnu"
+  },
+  {
+    "mahalle": "Görele",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Yenimahalle",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Cumhuriyet",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Cankurtaran",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Orhanlı",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Pürtelaş Hasan Efendi",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Ahmetli",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Mahmutşevketpaşa",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Paşaköy",
+    "ilce": "Sancaktepe"
+  },
+  {
+    "mahalle": "Kandilli",
+    "ilce": "Üsküdar"
+  },
+  {
+    "mahalle": "Saraç İshak",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Halaskargazi",
+    "ilce": "Şişli"
+  },
+  {
+    "mahalle": "Kalenderhane",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Binbirdirek",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Ataköy 1. Kısım",
+    "ilce": "Bakırköy"
+  },
+  {
+    "mahalle": "Meşrutiyet",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Karaburun",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Dereseki",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Şehit Muhtar",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Kuloğlu",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Yeniköy",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Hacımimi",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Koçullu",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Demirciköy",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Molla Hüsrev",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "İshaklı",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Şamlar",
+    "ilce": "Başakşehir"
+  },
+  {
+    "mahalle": "Kurna",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Ahmediye",
+    "ilce": "Büyükçekmece"
+  },
+  {
+    "mahalle": "Emin Sinan",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Göçbeyli",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Sazlıbosna",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Paşamandıra",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Fatih",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Çayırbaşı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Zerzavatçı",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Hacı Kasım",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Terkos",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Poyrazköy",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Anadolu",
+    "ilce": "Tuzla"
+  },
+  {
+    "mahalle": "Mimar Hayrettin",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Kamer Hatun",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Sırapınar",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Şahkulu",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Katipmustafa Çelebi",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Baklalı",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Durusu",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Sultan Ahmet",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Hüseyinli",
+    "ilce": "Çekmeköy"
+  },
+  {
+    "mahalle": "Sahilköy",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Alibahadır",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Doğancılı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Bedrettin",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Anadolufeneri",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Kumbaba",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Göçe",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Süleymaniye",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Hoca Gıyasettin",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Boyalık",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Ağaçlı",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Kaynarca",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Kemalpaşa",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Yeşilbayır",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Geredeli",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Işıklar",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Yassıören",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Hacımaşlı",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Kılıçlı",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Kabakoz",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Müeyyetzade",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Alacalı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Teke",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Kızılca",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Alemdar",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Öğümce",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Bozhane",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Dursunköy",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Asmalı Mescit",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Değirmençayırı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Kurtdoğmuş",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Hacı Kadın",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Balaban",
+    "ilce": "Arnavutköy"
+  },
+  {
+    "mahalle": "Yeniköy",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Mimar Kemalettin",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Bereketzade",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Ballıca",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Garipçe",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Akçakese",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Polonezköy",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Hüseyinağa",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Hocapaşa",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Satmazlı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Üvezli",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Oruçoğlu",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Kısırkaya",
+    "ilce": "Sarıyer"
+  },
+  {
+    "mahalle": "Karamandere",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Göksu",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Bucaklı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Karakiraz",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Evliya Çelebi",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Kervansaray",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Sofular",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Karacaköy",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Bıçkıdere",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "İmrendere",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "İmrenli",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Osmanköy",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Emirli",
+    "ilce": "Pendik"
+  },
+  {
+    "mahalle": "Yavuz Sinan",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Kurfallı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Göllü",
+    "ilce": "Beykoz"
+  },
+  {
+    "mahalle": "Demirtaş",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Hacıllı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Şuayipli",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Yazımanayır",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Kalem",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Çataklı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Hasanlı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Kömürlük",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Yaka",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Karabeyli",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Mesihpaşa",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Korucu",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Ulupelit",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Odayeri",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Soğullu",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Gökmaşlı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Çengilli",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "İhsaniye",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Kadıköy",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Çiftalan",
+    "ilce": "Eyüp"
+  },
+  {
+    "mahalle": "Ovacık",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Yeşilvadi",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Kurna",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Balabanağa",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Çelebi",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Molla Fenari",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Taya Hatun",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Avcıkoru",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Kemankeş Karamustafapaşa",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "İsaköy",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Erenler",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Emekyemez",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Beyazıt",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Sortullu",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Darlık",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Bozgoca",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Arap Cami",
+    "ilce": "Beyoğlu"
+  },
+  {
+    "mahalle": "Ağaçdere",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Hobyar",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Esenceli",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Yaylalı",
+    "ilce": "Şile"
+  },
+  {
+    "mahalle": "Mercan",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Sururi",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Rüstempaşa",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Tahtakale",
+    "ilce": "Fatih"
+  },
+  {
+    "mahalle": "Sarıdemir",
+    "ilce": "Fatih"
+  }
+]

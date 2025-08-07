@@ -181,7 +181,7 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`relative card ${
+              className={`relative card flex flex-col h-full ${
                 item.popular ? 'ring-2 ring-primary-500 scale-105' : ''
               }`}
             >
@@ -193,13 +193,13 @@ const Pricing = () => {
                 </div>
               )}
 
-              <div className="text-center space-y-6">
-                <div className="flex items-center justify-center">
+              <div className="text-center flex flex-col flex-grow">
+                <div className="flex items-center justify-center mb-6">
                   <item.icon className="h-8 w-8 text-primary-600 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">{item.name}</h3>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 mb-6">
                   <div className="flex items-center justify-center">
                     <span className="text-4xl font-bold text-gray-900">{item.price}₺</span>
                     {activeTab === 'subscriptions' && (
@@ -226,7 +226,7 @@ const Pricing = () => {
                   <p className="text-gray-600">{item.description}</p>
                 </div>
 
-                <ul className="space-y-3 text-left">
+                <ul className="space-y-3 text-left flex-grow mb-6">
                   {item.features.map((feature) => (
                     <li key={feature} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -235,7 +235,7 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <button className="w-full btn-primary">
+                <button className="w-full btn-primary mt-auto">
                   {activeTab === 'packages' ? 'Fiyat Teklifi Al' : 'Paketi Seç'}
                 </button>
               </div>
