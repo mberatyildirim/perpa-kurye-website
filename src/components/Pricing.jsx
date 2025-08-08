@@ -8,7 +8,13 @@ const Pricing = () => {
     const message = `Merhaba! ${packageName} paketi hakkında bilgi almak istiyorum. Fiyat: ${price}₺, İndirim: %${savings}`
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}`
-    window.open(whatsappUrl, '_blank')
+    
+    // Use window.location.href for better mobile compatibility
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      window.location.href = whatsappUrl
+    } else {
+      window.open(whatsappUrl, '_blank') // Open WhatsApp in new tab for desktop
+    }
   }
 
   const subscriptions = [

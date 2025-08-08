@@ -151,8 +151,12 @@ Paket Türü: ${formData.paketTuru}`
     // Create WhatsApp URL with phone number
     const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}`
     
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank') // Open WhatsApp with pre-filled message
+    // Use window.location.href for better mobile compatibility
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      window.location.href = whatsappUrl
+    } else {
+      window.open(whatsappUrl, '_blank') // Open WhatsApp in new tab for desktop
+    }
   }
 
   return (

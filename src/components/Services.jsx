@@ -21,7 +21,7 @@ const Services = ({ onServiceClick }) => {
     },
     {
       icon: Truck, // Icon for intercity courier service
-      title: 'Sehirlerarası Kurye', // Service title
+      title: 'Şehirlerarası Kurye', // Service title
       description: 'Şehirler arası kurye hizmetimiz ile belgelerinizi, paketlerinizi güvenle ve hızla ulaştırıyoruz. Tüm Türkiye\'ye hizmet veriyoruz.', // Service description
       features: ['Şehirler arası', 'Güvenli teslimat', 'Takip sistemi'], // Key features
       type: 'intercity-courier' // Service type for identification
@@ -41,7 +41,13 @@ const Services = ({ onServiceClick }) => {
     const message = `Merhaba! ${service.title} hizmeti hakkında bilgi almak istiyorum.`
     const encodedMessage = encodeURIComponent(message) // Encode message for URL
     const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}` // WhatsApp URL with phone number
-    window.open(whatsappUrl, '_blank') // Open WhatsApp in new tab
+    
+    // Use window.location.href for better mobile compatibility
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      window.location.href = whatsappUrl
+    } else {
+      window.open(whatsappUrl, '_blank') // Open WhatsApp in new tab for desktop
+    }
   }
 
   return (
