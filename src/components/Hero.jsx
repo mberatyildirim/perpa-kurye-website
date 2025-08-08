@@ -250,68 +250,68 @@ const Hero = () => {
                   <label className="block text-sm font-medium text-white">
                     Hizmet Türü
                   </label>
-                  <div className="grid grid-cols-3 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        handleInputChange('hizmetTuru', 'Kurye') // Set courier service
-                        // Clear error when user selects an option
-                        if (errors.hizmetTuru) {
-                          setErrors(prev => ({ ...prev, hizmetTuru: '' }))
-                        }
-                      }}
-                      className={`p-3 rounded-lg border-2 transition-all ${
-                        formData.hizmetTuru === 'Kurye'
-                          ? 'border-secondary-400 bg-secondary-400/20'
-                          : errors.hizmetTuru 
-                            ? 'border-red-400 bg-white/10'
-                            : 'border-white/30 bg-white/10 hover:bg-white/20'
-                      }`}
-                    >
+                                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleInputChange('hizmetTuru', 'Kurye') // Set courier service
+                      // Clear error when user selects an option
+                      if (errors.hizmetTuru) {
+                        setErrors(prev => ({ ...prev, hizmetTuru: '' }))
+                      }
+                    }}
+                    className={`p-3 rounded-lg border-2 transition-all ${
+                      formData.hizmetTuru === 'Kurye'
+                        ? 'border-secondary-400 bg-secondary-400/20'
+                        : errors.hizmetTuru 
+                          ? 'border-red-400 bg-white/10'
+                          : 'border-white/30 bg-white/10 hover:bg-white/20'
+                    }`}
+                  >
                       <Bike className="h-6 w-6 mx-auto mb-2" />
                       <span className="text-sm">Kurye</span>
                       <br/>
                       <span className="text-xs text-white/60 mt-1">İstanbul'un her noktasına hızlı ve güvenli kurye hizmeti</span>
                     </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        handleInputChange('hizmetTuru', 'Eczaneden Getir') // Set pharmacy service
-                        // Clear error when user selects an option
-                        if (errors.hizmetTuru) {
-                          setErrors(prev => ({ ...prev, hizmetTuru: '' }))
-                        }
-                      }}
-                      className={`p-3 rounded-lg border-2 transition-all ${
-                        formData.hizmetTuru === 'Eczaneden Getir'
-                          ? 'border-secondary-400 bg-secondary-400/20'
-                          : errors.hizmetTuru 
-                            ? 'border-red-400 bg-white/10'
-                            : 'border-white/30 bg-white/10 hover:bg-white/20'
-                      }`}
-                    >
+                                      <button
+                    type="button"
+                    onClick={() => {
+                      handleInputChange('hizmetTuru', 'Eczaneden Getir') // Set pharmacy service
+                      // Clear error when user selects an option
+                      if (errors.hizmetTuru) {
+                        setErrors(prev => ({ ...prev, hizmetTuru: '' }))
+                      }
+                    }}
+                    className={`p-3 rounded-lg border-2 transition-all ${
+                      formData.hizmetTuru === 'Eczaneden Getir'
+                        ? 'border-secondary-400 bg-secondary-400/20'
+                        : errors.hizmetTuru 
+                          ? 'border-red-400 bg-white/10'
+                          : 'border-white/30 bg-white/10 hover:bg-white/20'
+                    }`}
+                  >
                       <Pill className="h-6 w-6 mx-auto mb-2" />
                       <span className="text-sm">Eczaneden Getir</span>
                       <br/>
                       <span className="text-xs text-white/60 mt-1">İlaç ve sağlık ürünlerini en yakın eczaneden kapınıza kadar getiriyoruz</span>
                     </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        handleInputChange('hizmetTuru', 'Vale') // Set valet service
-                        // Clear error when user selects an option
-                        if (errors.hizmetTuru) {
-                          setErrors(prev => ({ ...prev, hizmetTuru: '' }))
-                        }
-                      }}
-                      className={`p-3 rounded-lg border-2 transition-all ${
-                        formData.hizmetTuru === 'Vale'
-                          ? 'border-secondary-400 bg-secondary-400/20'
-                          : errors.hizmetTuru 
-                            ? 'border-red-400 bg-white/10'
-                            : 'border-white/30 bg-white/10 hover:bg-white/20'
-                      }`}
-                    >
+                                      <button
+                    type="button"
+                    onClick={() => {
+                      handleInputChange('hizmetTuru', 'Vale') // Set valet service
+                      // Clear error when user selects an option
+                      if (errors.hizmetTuru) {
+                        setErrors(prev => ({ ...prev, hizmetTuru: '' }))
+                      }
+                    }}
+                    className={`p-3 rounded-lg border-2 transition-all ${
+                      formData.hizmetTuru === 'Vale'
+                        ? 'border-secondary-400 bg-secondary-400/20'
+                        : errors.hizmetTuru 
+                          ? 'border-red-400 bg-white/10'
+                          : 'border-white/30 bg-white/10 hover:bg-white/20'
+                    }`}
+                  >
                       <Car className="h-6 w-6 mx-auto mb-2" />
                       <span className="text-sm">Vale</span>
                       <br/>
