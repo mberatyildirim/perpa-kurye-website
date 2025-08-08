@@ -214,9 +214,9 @@ const Footer = () => {
           href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-primary-600 hover:bg-primary-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2"
+          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2"
         >
-          <Phone className="h-5 w-5" />
+          <MessageCircle className="h-5 w-5" />
           <span className="font-medium">Kurye Çağır</span>
         </a>
       </motion.div>

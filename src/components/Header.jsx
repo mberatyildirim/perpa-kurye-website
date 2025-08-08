@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, Phone, Bike, Plane, MapPin } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, MessageCircle } from 'lucide-react'
 
 const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -126,9 +126,9 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
               href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary flex items-center"
+              className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center"
             >
-              <Phone className="h-4 w-4 mr-2" />
+              <MessageCircle className="h-4 w-4 mr-2" />
               Kurye Çağır
             </a>
           </div>
@@ -171,10 +171,10 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
                 href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary flex items-center justify-center mt-4"
+                className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Phone className="h-4 w-4 mr-2" />
+                <MessageCircle className="h-4 w-4 mr-2" />
                 Kurye Çağır
               </a>
             </div>

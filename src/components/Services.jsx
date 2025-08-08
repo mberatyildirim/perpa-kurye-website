@@ -1,54 +1,47 @@
 import React from 'react' // Import React for component functionality
 import { motion } from 'framer-motion' // Import motion for animations
-import { Bike, Car, Package, Clock, Shield, MapPin, Zap, Send, Truck, Pill } from 'lucide-react' // Import icons for services
-import { sendPharmacyData, sendValetData } from '../utils/googleSheets' // Import Google Sheets functions
+import { ShoppingBag, Plane, Truck, Car, Clock, Shield, MapPin, Zap, MessageCircle } from 'lucide-react' // Import icons for services
 
 const Services = ({ onServiceClick }) => {
-  // Define the three main services with their details
+  // Define the four main services with their details
   const services = [
     {
-      icon: Bike, // Icon for courier service
-      title: 'Kurye', // Service title
-      features: ['30 dk içinde teslimat', 'Sigortalı kargo', '7/24 hizmet'], // Key features
-      type: 'courier' // Service type for routing
+      icon: ShoppingBag, // Icon for market delivery service
+      title: 'Marketten Getir', // Service title
+      description: 'Market alışverişinizi biz yapalım. Taze ürünler, hızlı teslimat ve güvenli paketleme ile market ihtiyaçlarınızı kapınıza getiriyoruz.', // Service description
+      features: ['Taze ürün garantisi', 'Hızlı teslimat', 'Güvenli paketleme'], // Key features
+      type: 'market' // Service type for identification
     },
     {
-      icon: Pill, // Icon for pharmacy service
-      title: 'Eczaneden Getir', // Service title
-      features: ['Hızlı teslimat', 'Güvenli taşıma', 'Reçeteli ilaç'], // Key features
-      type: 'pharmacy' // Service type for routing
+      icon: Plane, // Icon for air cargo service
+      title: 'Hava Kargo', // Service title
+      description: 'Acil gönderileriniz için hızlı hava kargo hizmeti. Türkiye\'nin her noktasına güvenli ve hızlı kargo taşımacılığı yapıyoruz.', // Service description
+      features: ['Hızlı teslimat', 'Güvenli taşıma', 'Türkiye geneli'], // Key features
+      type: 'air-cargo' // Service type for identification
     },
     {
-      icon: Car, // Icon for valet service
-      title: 'Vale', // Service title
-      features: ['Güvenli park', 'Hızlı teslim', 'Sigortalı hizmet'], // Key features
-      type: 'valet' // Service type for routing
+      icon: Truck, // Icon for intercity courier service
+      title: 'Sehirlerarası Kurye', // Service title
+      description: 'Şehirler arası kurye hizmetimiz ile belgelerinizi, paketlerinizi güvenle ve hızla ulaştırıyoruz. Tüm Türkiye\'ye hizmet veriyoruz.', // Service description
+      features: ['Şehirler arası', 'Güvenli teslimat', 'Takip sistemi'], // Key features
+      type: 'intercity-courier' // Service type for identification
+    },
+    {
+      icon: Car, // Icon for driver rental service
+      title: 'Şoför Kiralama', // Service title
+      description: 'Profesyonel şoför kiralama hizmeti. Deneyimli ve güvenilir şoförlerimiz ile seyahatlerinizde yanınızdayız.', // Service description
+      features: ['Deneyimli şoförler', 'Güvenli sürüş', '7/24 hizmet'], // Key features
+      type: 'driver-rental' // Service type for identification
     }
   ]
 
-  // Function to handle service button clicks
-  const handleServiceClick = async (service) => {
-    if (service.type === 'courier') {
-      // Navigate to courier form page
-      onServiceClick('courier-form')
-    } else {
-      // Send data to Google Sheets based on service type
-      try {
-        if (service.type === 'pharmacy') {
-          await sendPharmacyData(service.title) // Send pharmacy data
-        } else if (service.type === 'valet') {
-          await sendValetData(service.title) // Send valet data
-        }
-      } catch (error) {
-        console.error('Error sending data to Google Sheets:', error) // Log error but continue
-      }
-
-      // Send WhatsApp message for pharmacy and valet services
-      const message = `Merhaba! ${service.title} hizmeti almak istiyorum.`
-      const encodedMessage = encodeURIComponent(message)
-      const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}`
-      window.open(whatsappUrl, '_blank')
-    }
+  // Function to handle service button clicks and send WhatsApp messages
+  const handleServiceClick = (service) => {
+    // Create WhatsApp message with service information
+    const message = `Merhaba! ${service.title} hizmeti hakkında bilgi almak istiyorum.`
+    const encodedMessage = encodeURIComponent(message) // Encode message for URL
+    const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}` // WhatsApp URL with phone number
+    window.open(whatsappUrl, '_blank') // Open WhatsApp in new tab
   }
 
   return (
@@ -63,7 +56,7 @@ const Services = ({ onServiceClick }) => {
           className="text-center mb-6"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Tüm Hizmetlerimiz
+            Diğer Hizmetlerimiz
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             İstanbul'un her noktasında profesyonel hizmet sunuyoruz. 
@@ -72,7 +65,7 @@ const Services = ({ onServiceClick }) => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -85,7 +78,10 @@ const Services = ({ onServiceClick }) => {
               {/* Service Image */}
               <div className="relative h-32 mb-6 overflow-hidden rounded-lg">
                 <img 
-                  src={`/images/services/${service.title.toLowerCase().replace(' ', '-')}.jpg`}
+                  src={`/images/services/${service.title.toLowerCase().replace(/[çğıöşü]/g, (match) => {
+                    const replacements = { 'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u' }
+                    return replacements[match]
+                  }).replace(/\s+/g, '-')}.jpg`}
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
@@ -100,16 +96,26 @@ const Services = ({ onServiceClick }) => {
               <div className="px-6 pb-6 flex flex-col flex-grow">
                 <div className="flex-grow">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.description}</p>
+                  
+                  {/* Features List */}
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                        <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mr-2"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 
-                {/* Service Button - Fixed at bottom */}
+                {/* WhatsApp Button - Green with WhatsApp icon */}
                 <button
                   onClick={() => handleServiceClick(service)}
                   className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 mt-6"
                 >
-                  <Send className="h-4 w-4" />
-                  <span>Fiyat Al</span>
+                  <MessageCircle className="h-4 w-4" />
+                  <span>Kurye Çağır</span>
                 </button>
               </div>
             </motion.div>
@@ -129,7 +135,7 @@ const Services = ({ onServiceClick }) => {
               Neden Perpa Kurye?
             </h3>
             <p className="text-primary-100 text-lg">
-              Güvenilir, hızlı ve profesyonel hizmet anlayışımızla fark yaratıyoruz
+              Perpa Kurye, T.C. Ulaştırma Bakanlığı yetki belgesi ile Bilgi Teknolojileri Kurumu Evrensel Posta Hizmeti Sağlayıcısı yetki belgesine sahiptir.
             </p>
           </div>
 

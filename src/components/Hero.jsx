@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react' // Import useState and useEffect for form state management
 import { motion } from 'framer-motion' // Import motion for animations
-import { Bike, Clock, Shield, MapPin, Phone, Package, Car, Send, Pill } from 'lucide-react' // Import additional icons for the form
+import { Bike, Clock, Shield, MapPin, Phone, Package, Car, Send, Pill, Zap, MessageCircle } from 'lucide-react' // Import additional icons for the form
 import { sendHeroData } from '../utils/googleSheets' // Import Google Sheets function
 
 const Hero = () => {
@@ -753,10 +753,10 @@ const Hero = () => {
                               {item.mahalle} Mh. - {item.ilce}
                             </button>
                           ))}
-                        </div>
-                      </div>
+              </div>
+              </div>
                     )}
-                  </div>
+              </div>
                 )}
 
 
@@ -766,10 +766,10 @@ const Hero = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-secondary-400 hover:bg-secondary-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"
+                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"
                 >
-                  <Send className="h-5 w-5" />
-                  <span>Fiyat Al</span>
+                  <MessageCircle className="h-5 w-5" />
+                  <span>Kurye Çağır</span>
                 </button>
               </form>
             </motion.div>
@@ -814,20 +814,11 @@ const Hero = () => {
                   </div>
                   
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-white">Hızlı Teslimat</h3>
+                    <h3 className="text-2xl font-bold text-white">Yetkili Teslimat</h3>
                     <p className="text-white/80 text-sm leading-relaxed">
-                      İstanbul'un her noktasına 30 dakika içinde kurye hizmeti
-                    </p>
-                    <div className="flex justify-center space-x-6">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-white">300₺</div>
-                        <div className="text-xs text-white/70">Başlangıç</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-white">7/24</div>
-                        <div className="text-xs text-white/70">Hizmet</div>
-                      </div>
-                    </div>
+                        Perpa Kurye, T.C. Ulaştırma Bakanlığı yetki belgesi ile Bilgi Teknolojileri Kurumu Evrensel Posta Hizmeti Sağlayıcısı yetki belgesine sahiptir.
+
+</p>
                   </div>
                 </div>
               </div>
