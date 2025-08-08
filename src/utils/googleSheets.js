@@ -85,7 +85,7 @@ export const sendValetData = async (serviceTitle) => {
 // Function to send hero form data
 export const sendHeroData = async (formData) => {
   const data = {
-    serviceType: 'Hero Form',
+    serviceType: formData.hizmetTuru || 'Hero Form',
     alinacakSemt: formData.alinacakSemt || '',
     verilecekSemt: formData.verilecekSemt || '',
     paketBoyutu: formData.paketBoyutu || '',

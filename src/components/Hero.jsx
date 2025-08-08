@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react' // Import useState and useEffect for form state management
 import { motion } from 'framer-motion' // Import motion for animations
-import { Bike, Clock, Shield, MapPin, Phone, Package, Car, Send } from 'lucide-react' // Import additional icons for the form
+import { Bike, Clock, Shield, MapPin, Phone, Package, Car, Send, Pill } from 'lucide-react' // Import additional icons for the form
 import { sendHeroData } from '../utils/googleSheets' // Import Google Sheets function
 
 const Hero = () => {
   // State management for form fields
   const [formData, setFormData] = useState({
+    hizmetTuru: '', // State for service type
     alinacakSemt: '', // State for pickup neighborhood
     verilecekSemt: '', // State for delivery neighborhood
     paketBoyutu: '', // State for package size
@@ -14,6 +15,7 @@ const Hero = () => {
 
   // State for form validation errors
   const [errors, setErrors] = useState({
+    hizmetTuru: '', // Error message for service type
     alinacakSemt: '', // Error message for pickup neighborhood
     verilecekSemt: '', // Error message for delivery neighborhood
     paketBoyutu: '', // Error message for package size
@@ -79,6 +81,7 @@ const Hero = () => {
   // Function to validate form fields
   const validateForm = () => {
     const newErrors = {
+      hizmetTuru: '', // Reset service type error
       alinacakSemt: '', // Reset pickup error
       verilecekSemt: '', // Reset delivery error
       paketBoyutu: '', // Reset package error
@@ -88,6 +91,11 @@ const Hero = () => {
     let isValid = true // Track overall validation status
     
     // Validate each field
+    if (!formData.hizmetTuru) {
+      newErrors.hizmetTuru = 'Bu alanı doldurunuz' // Set service type error
+      isValid = false
+    }
+    
     if (!formData.alinacakSemt.trim()) {
       newErrors.alinacakSemt = 'Bu alanı doldurunuz' // Set pickup error
       isValid = false
@@ -131,7 +139,9 @@ const Hero = () => {
     // Create WhatsApp message with form data
     const message = `Merhaba! 
     
-${formData.alinacakSemt}'den ${formData.verilecekSemt}'e ${formData.paketBoyutu} şekilde ${formData.kuryeTipi} kurye hizmeti almak istiyorum.`
+${formData.hizmetTuru} hizmeti almak istiyorum.
+
+${formData.alinacakSemt}'den ${formData.verilecekSemt}'e ${formData.paketBoyutu} şekilde ${formData.kuryeTipi} kurye hizmeti.`
     
     // Encode message for WhatsApp URL
     const encodedMessage = encodeURIComponent(message)
@@ -196,6 +206,84 @@ ${formData.alinacakSemt}'den ${formData.verilecekSemt}'e ${formData.paketBoyutu}
               className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20"
             >
               <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Hizmet Türü */}
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-white">
+                    Hizmet Türü
+                  </label>
+                  <div className="grid grid-cols-3 gap-3">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleInputChange('hizmetTuru', 'Kurye') // Set courier service
+                        // Clear error when user selects an option
+                        if (errors.hizmetTuru) {
+                          setErrors(prev => ({ ...prev, hizmetTuru: '' }))
+                        }
+                      }}
+                      className={`p-3 rounded-lg border-2 transition-all ${
+                        formData.hizmetTuru === 'Kurye'
+                          ? 'border-secondary-400 bg-secondary-400/20'
+                          : errors.hizmetTuru 
+                            ? 'border-red-400 bg-white/10'
+                            : 'border-white/30 bg-white/10 hover:bg-white/20'
+                      }`}
+                    >
+                      <Bike className="h-6 w-6 mx-auto mb-2" />
+                      <span className="text-sm">Kurye</span>
+                      <br/>
+                      <span className="text-xs text-white/60 mt-1">İstanbul'un her noktasına hızlı ve güvenli kurye hizmeti</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleInputChange('hizmetTuru', 'Eczaneden Getir') // Set pharmacy service
+                        // Clear error when user selects an option
+                        if (errors.hizmetTuru) {
+                          setErrors(prev => ({ ...prev, hizmetTuru: '' }))
+                        }
+                      }}
+                      className={`p-3 rounded-lg border-2 transition-all ${
+                        formData.hizmetTuru === 'Eczaneden Getir'
+                          ? 'border-secondary-400 bg-secondary-400/20'
+                          : errors.hizmetTuru 
+                            ? 'border-red-400 bg-white/10'
+                            : 'border-white/30 bg-white/10 hover:bg-white/20'
+                      }`}
+                    >
+                      <Pill className="h-6 w-6 mx-auto mb-2" />
+                      <span className="text-sm">Eczaneden Getir</span>
+                      <br/>
+                      <span className="text-xs text-white/60 mt-1">İlaç ve sağlık ürünlerini en yakın eczaneden kapınıza kadar getiriyoruz</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleInputChange('hizmetTuru', 'Vale') // Set valet service
+                        // Clear error when user selects an option
+                        if (errors.hizmetTuru) {
+                          setErrors(prev => ({ ...prev, hizmetTuru: '' }))
+                        }
+                      }}
+                      className={`p-3 rounded-lg border-2 transition-all ${
+                        formData.hizmetTuru === 'Vale'
+                          ? 'border-secondary-400 bg-secondary-400/20'
+                          : errors.hizmetTuru 
+                            ? 'border-red-400 bg-white/10'
+                            : 'border-white/30 bg-white/10 hover:bg-white/20'
+                      }`}
+                    >
+                      <Car className="h-6 w-6 mx-auto mb-2" />
+                      <span className="text-sm">Vale</span>
+                      <br/>
+                      <span className="text-xs text-white/60 mt-1">Aracınızı bulunduğu lokasyondan alıp, sizi istediğiniz lokasyona götürüyoruz</span>
+                    </button>
+                  </div>
+                  {errors.hizmetTuru && (
+                    <p className="text-red-400 text-sm mt-1">{errors.hizmetTuru}</p>
+                  )}
+                </div>
+
                 {/* Alınacak Semt */}
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-white">

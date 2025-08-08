@@ -9,21 +9,18 @@ const Services = ({ onServiceClick }) => {
     {
       icon: Bike, // Icon for courier service
       title: 'Kurye', // Service title
-      description: 'İstanbul\'un her noktasına hızlı ve güvenli kurye hizmeti. Evrak, paket ve kargo teslimatı.', // Service description
       features: ['30 dk içinde teslimat', 'Sigortalı kargo', '7/24 hizmet'], // Key features
       type: 'courier' // Service type for routing
     },
     {
       icon: Pill, // Icon for pharmacy service
       title: 'Eczaneden Getir', // Service title
-      description: 'İlaç ve sağlık ürünlerini en yakın eczaneden kapınıza kadar getiriyoruz.', // Service description
       features: ['Hızlı teslimat', 'Güvenli taşıma', 'Reçeteli ilaç'], // Key features
       type: 'pharmacy' // Service type for routing
     },
     {
       icon: Car, // Icon for valet service
       title: 'Vale', // Service title
-      description: 'Aracınızı bulunduğu lokasyondan alıp, sizi istediğiniz lokasyona götürüyoruz ve size aracınızı teslim ediyoruz.', // Service description
       features: ['Güvenli park', 'Hızlı teslim', 'Sigortalı hizmet'], // Key features
       type: 'valet' // Service type for routing
     }
@@ -103,7 +100,6 @@ const Services = ({ onServiceClick }) => {
               <div className="px-6 pb-6 flex flex-col flex-grow">
                 <div className="flex-grow">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                 </div>
                 
                 {/* Service Button - Fixed at bottom */}
