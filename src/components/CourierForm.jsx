@@ -139,7 +139,7 @@ const CourierForm = ({ onBack }) => {
     // Create WhatsApp message with form data
     const message = `Merhaba! Kurye hizmeti almak istiyorum.
 
-Alınacak Semt: ${formData.alinacakSemt}
+Teslim Alınacak Semt: ${formData.alinacakSemt}
 Teslim Edilecek Semt: ${formData.teslimEdilecekSemt}
 Paket Boyutu: ${formData.paketBoyutu}
 Araç Türü: ${formData.aracTuru}
@@ -193,7 +193,7 @@ Paket Türü: ${formData.paketTuru}`
             <div className="space-y-2">
               <label className="block text-sm font-medium text-white">
                 <MapPin className="inline h-4 w-4 mr-2" />
-                Alınacak Semt
+                TeslimAlınacak Semt
               </label>
               <input
                 type="text"

@@ -230,31 +230,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-yellow-50 border border-yellow-200 rounded-xl p-6"
-        >
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0">
-              <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">!</span>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Lütfen Dikkat!
-              </h4>
-              <p className="text-gray-700">
-                Güvenlik nedeni ile; şüpheli görülen paketler kolluk güçlerine ibraz edilir, 
-                kolluk güçleri tarafından onaylanır ise teslimatı gerçekleştirilir.
-              </p>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   )

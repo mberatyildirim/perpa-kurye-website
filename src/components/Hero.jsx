@@ -11,9 +11,9 @@ const Hero = () => {
     verilecekSemt: '', // State for delivery neighborhood
     paketBoyutu: '', // State for package size
     kuryeTipi: '', // State for courier type (motorcycle/car)
-    ilacIsmi: '', // State for medicine name
-    aracBulunduguSemt: '', // State for car location
-    siziAlacagimizSemt: '' // State for pickup location
+    siziAlacagimizSemt: '', // State for pickup location
+    valeTarih: '', // State for valet date
+    valeSaat: '' // State for valet time
   })
 
   // State for form validation errors
@@ -23,15 +23,16 @@ const Hero = () => {
     verilecekSemt: '', // Error message for delivery neighborhood
     paketBoyutu: '', // Error message for package size
     kuryeTipi: '', // Error message for courier type
-    ilacIsmi: '', // Error message for medicine name
-    aracBulunduguSemt: '', // Error message for car location
-    siziAlacagimizSemt: '' // Error message for pickup location
+    siziAlacagimizSemt: '', // Error message for pickup location
+    valeTarih: '', // Error message for valet date
+    valeSaat: '' // Error message for valet time
   })
 
   // State for neighborhoods data
   const [neighborhoods, setNeighborhoods] = useState([]) // Array to store neighborhood data
   const [filteredNeighborhoodsAlinacak, setFilteredNeighborhoodsAlinacak] = useState([]) // Filtered neighborhoods for pickup dropdown
   const [filteredNeighborhoodsVerilecek, setFilteredNeighborhoodsVerilecek] = useState([]) // Filtered neighborhoods for delivery dropdown
+  const [filteredNeighborhoodsSiziAlacagimiz, setFilteredNeighborhoodsSiziAlacagimiz] = useState([]) // Filtered neighborhoods for valet pickup dropdown
 
       // Load neighborhoods data on component mount
     useEffect(() => {
@@ -42,6 +43,7 @@ const Hero = () => {
           setNeighborhoods(data) // Set neighborhoods data
           setFilteredNeighborhoodsAlinacak(data) // Initialize pickup filtered list
           setFilteredNeighborhoodsVerilecek(data) // Initialize delivery filtered list
+          setFilteredNeighborhoodsSiziAlacagimiz(data) // Initialize valet pickup filtered list
         })
         .catch(error => {
           console.error('Error loading neighborhoods:', error) // Log error if data loading fails
@@ -61,6 +63,8 @@ const Hero = () => {
     if (!searchTerm.trim()) {
       if (field === 'alinacak') {
         setFilteredNeighborhoodsAlinacak(neighborhoods) // Show all for pickup if search is empty
+      } else if (field === 'siziAlacagimiz') {
+        setFilteredNeighborhoodsSiziAlacagimiz(neighborhoods) // Show all for valet pickup if search is empty
       } else {
         setFilteredNeighborhoodsVerilecek(neighborhoods) // Show all for delivery if search is empty
       }
@@ -79,6 +83,8 @@ const Hero = () => {
     // Update the appropriate filtered state based on field
     if (field === 'alinacak') {
       setFilteredNeighborhoodsAlinacak(filtered) // Update pickup filtered results
+    } else if (field === 'siziAlacagimiz') {
+      setFilteredNeighborhoodsSiziAlacagimiz(filtered) // Update valet pickup filtered results
     } else {
       setFilteredNeighborhoodsVerilecek(filtered) // Update delivery filtered results
     }
@@ -92,9 +98,9 @@ const Hero = () => {
       verilecekSemt: '', // Reset delivery error
       paketBoyutu: '', // Reset package error
       kuryeTipi: '', // Reset courier error
-      ilacIsmi: '', // Reset medicine name error
-      aracBulunduguSemt: '', // Reset car location error
-      siziAlacagimizSemt: '' // Reset pickup location error
+      siziAlacagimizSemt: '', // Reset pickup location error
+      valeTarih: '', // Reset valet date error
+      valeSaat: '' // Reset valet time error
     }
     
     let isValid = true // Track overall validation status
@@ -128,21 +134,21 @@ const Hero = () => {
         newErrors.verilecekSemt = 'Bu alanı doldurunuz' // Set delivery error
         isValid = false
       }
-      if (!formData.ilacIsmi.trim()) {
-        newErrors.ilacIsmi = 'Bu alanı doldurunuz' // Set medicine name error
-        isValid = false
-      }
     } else if (formData.hizmetTuru === 'Vale') {
-      if (!formData.aracBulunduguSemt.trim()) {
-        newErrors.aracBulunduguSemt = 'Bu alanı doldurunuz' // Set car location error
-        isValid = false
-      }
       if (!formData.siziAlacagimizSemt.trim()) {
         newErrors.siziAlacagimizSemt = 'Bu alanı doldurunuz' // Set pickup location error
         isValid = false
       }
       if (!formData.verilecekSemt.trim()) {
         newErrors.verilecekSemt = 'Bu alanı doldurunuz' // Set delivery error
+        isValid = false
+      }
+      if (!formData.valeTarih) {
+        newErrors.valeTarih = 'Bu alanı doldurunuz' // Set valet date error
+        isValid = false
+      }
+      if (!formData.valeSaat) {
+        newErrors.valeSaat = 'Bu alanı doldurunuz' // Set valet time error
         isValid = false
       }
       if (!formData.kuryeTipi) {
@@ -177,9 +183,9 @@ const Hero = () => {
     if (formData.hizmetTuru === 'Kurye') {
       message += `${formData.alinacakSemt}'den ${formData.verilecekSemt}'e ${formData.paketBoyutu} şekilde ${formData.kuryeTipi} kurye hizmeti.`
     } else if (formData.hizmetTuru === 'Eczaneden Getir') {
-      message += `İlacın Teslim Edileceği Semt: ${formData.verilecekSemt}\nİlaç İsmi: ${formData.ilacIsmi}`
+      message += `İlacın Teslim Edileceği Semt: ${formData.verilecekSemt}`
     } else if (formData.hizmetTuru === 'Vale') {
-      message += `Aracın Bulunduğu Semt: ${formData.aracBulunduguSemt}\nSizi Alacağımız Semt: ${formData.siziAlacagimizSemt}\nTeslim Edilecek Semt: ${formData.verilecekSemt}\nAraç Türü: ${formData.kuryeTipi}`
+      message += `Sizi Alacağımız Semt: ${formData.siziAlacagimizSemt}\nSizi Götüreceğimiz Semt: ${formData.verilecekSemt}\nTarih: ${formData.valeTarih}\nSaat: ${formData.valeSaat}\nAraç Türü: ${formData.kuryeTipi}`
     }
     
     // Encode message for WhatsApp URL
@@ -204,24 +210,24 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary-600/90 via-primary-700/80 to-primary-800/90"></div>
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="space-y-4">
+            <div className="space-y-3">
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-4xl lg:text-6xl font-bold leading-tight"
+                className="text-3xl lg:text-5xl font-bold leading-tight"
               >
                 <span className="block">PERPA KURYE</span>
-                <span className="block text-2xl lg:text-3xl font-medium text-primary-100 mt-2">
+                <span className="block text-xl lg:text-2xl font-medium text-primary-100 mt-1">
                   Daima Zamanında
                 </span>
               </motion.h1>
@@ -230,7 +236,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg lg:text-xl text-primary-100 max-w-2xl"
+                className="text-base lg:text-lg text-primary-100 max-w-2xl"
               >
                 İstanbul'un her noktasında hızlı, güvenli ve profesyonel kurye hizmeti. 
                 7/24 yanınızdayız!
@@ -244,13 +250,13 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20"
             >
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3">
                 {/* Hizmet Türü */}
-                <div className="space-y-2">
+                <div className="space-y-1">
                   <label className="block text-sm font-medium text-white">
                     Hizmet Türü
                   </label>
-                                  <div className="grid grid-cols-3 gap-3">
+                                  <div className="grid grid-cols-3 gap-2">
                   <button
                     type="button"
                     onClick={() => {
@@ -321,10 +327,10 @@ const Hero = () => {
                 {formData.hizmetTuru === 'Kurye' && (
                   <>
                     {/* Alınacak Semt */}
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       <label className="block text-sm font-medium text-white">
                         <MapPin className="inline h-4 w-4 mr-2" />
-                        Alınacak Semt
+                        Teslim Alınacak Semt
                       </label>
                       <input
                         type="text"
@@ -368,7 +374,7 @@ const Hero = () => {
                     </div>
 
                     {/* Teslim Edilecek Semt - For Kurye only */}
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       <label className="block text-sm font-medium text-white">
                         <MapPin className="inline h-4 w-4 mr-2" />
                         Teslim Edilecek Semt
@@ -415,7 +421,7 @@ const Hero = () => {
                     </div>
 
                     {/* Paket Boyutu */}
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       <label className="block text-sm font-medium text-white">
                         <Package className="inline h-4 w-4 mr-2" />
                         Paket Boyutu
@@ -444,7 +450,7 @@ const Hero = () => {
                     </div>
 
                     {/* Kurye Tipi */}
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       <label className="block text-sm font-medium text-white">
                         Kurye Tipi
                       </label>
@@ -497,68 +503,13 @@ const Hero = () => {
                   </>
                 )}
 
-                {/* Eczaneden Getir Fields */}
-                {formData.hizmetTuru === 'Eczaneden Getir' && (
-                  <>
-                    {/* İlaç İsmi */}
-                    <div className="space-y-2">
-                      <label className="block text-sm font-medium text-white">
-                        <Pill className="inline h-4 w-4 mr-2" />
-                        İlaç İsmi
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.ilacIsmi}
-                        onChange={(e) => {
-                          handleInputChange('ilacIsmi', e.target.value) // Update medicine name
-                          // Clear error when user starts typing
-                          if (errors.ilacIsmi) {
-                            setErrors(prev => ({ ...prev, ilacIsmi: '' }))
-                          }
-                        }}
-                        placeholder="İlaç ismini yazın..."
-                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
-                          errors.ilacIsmi ? 'border-red-400' : 'border-white/30'
-                        }`}
-                      />
-                      {errors.ilacIsmi && (
-                        <p className="text-red-400 text-sm mt-1">{errors.ilacIsmi}</p>
-                      )}
-                    </div>
-                  </>
-                )}
+
 
                 {/* Vale Fields */}
                 {formData.hizmetTuru === 'Vale' && (
                   <>
-                    {/* Aracın Bulunduğu Semt */}
-                    <div className="space-y-2">
-                      <label className="block text-sm font-medium text-white">
-                        <MapPin className="inline h-4 w-4 mr-2" />
-                        Aracın Bulunduğu Semt
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.aracBulunduguSemt}
-                        onChange={(e) => {
-                          handleInputChange('aracBulunduguSemt', e.target.value) // Update car location
-                          // Clear error when user starts typing
-                          if (errors.aracBulunduguSemt) {
-                            setErrors(prev => ({ ...prev, aracBulunduguSemt: '' }))
-                          }
-                        }}
-                        placeholder="Aracın bulunduğu semti yazın..."
-                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
-                          errors.aracBulunduguSemt ? 'border-red-400' : 'border-white/30'
-                        }`}
-                      />
-                      {errors.aracBulunduguSemt && (
-                        <p className="text-red-400 text-sm mt-1">{errors.aracBulunduguSemt}</p>
-                      )}
-                    </div>
-
                     {/* Sizi Alacağımız Semt */}
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       <label className="block text-sm font-medium text-white">
                         <MapPin className="inline h-4 w-4 mr-2" />
                         Sizi Alacağımız Semt
@@ -568,6 +519,7 @@ const Hero = () => {
                         value={formData.siziAlacagimizSemt}
                         onChange={(e) => {
                           handleInputChange('siziAlacagimizSemt', e.target.value) // Update pickup location
+                          filterNeighborhoods(e.target.value, 'siziAlacagimiz') // Filter neighborhoods
                           // Clear error when user starts typing
                           if (errors.siziAlacagimizSemt) {
                             setErrors(prev => ({ ...prev, siziAlacagimizSemt: '' }))
@@ -581,10 +533,131 @@ const Hero = () => {
                       {errors.siziAlacagimizSemt && (
                         <p className="text-red-400 text-sm mt-1">{errors.siziAlacagimizSemt}</p>
                       )}
+                      {/* Dropdown for filtered neighborhoods */}
+                      {formData.siziAlacagimizSemt && filteredNeighborhoodsSiziAlacagimiz && filteredNeighborhoodsSiziAlacagimiz.length > 0 && (
+                        <div className="relative z-50">
+                          <div className="absolute top-full left-0 right-0 mt-1 max-h-40 overflow-y-auto bg-white rounded-lg shadow-lg border">
+                            {filteredNeighborhoodsSiziAlacagimiz.slice(0, 10).map((item, index) => (
+                              <button
+                                key={index}
+                                type="button"
+                                onClick={() => {
+                                  handleInputChange('siziAlacagimizSemt', `${item.mahalle} Mh. - ${item.ilce}`) // Set selected neighborhood with Mh. suffix
+                                  setFilteredNeighborhoodsSiziAlacagimiz([]) // Clear pickup dropdown
+                                }}
+                                className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100"
+                              >
+                                {item.mahalle} Mh. - {item.ilce}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Sizi Götüreceğimiz Semt */}
+                    <div className="space-y-1">
+                      <label className="block text-sm font-medium text-white">
+                        <MapPin className="inline h-4 w-4 mr-2" />
+                        Sizi Götüreceğimiz Semt
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.verilecekSemt}
+                        onChange={(e) => {
+                          handleInputChange('verilecekSemt', e.target.value) // Update delivery neighborhood
+                          filterNeighborhoods(e.target.value, 'verilecek') // Filter neighborhoods
+                          // Clear error when user starts typing
+                          if (errors.verilecekSemt) {
+                            setErrors(prev => ({ ...prev, verilecekSemt: '' }))
+                          }
+                        }}
+                        placeholder="Sizi götüreceğimiz semti yazın..."
+                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                          errors.verilecekSemt ? 'border-red-400' : 'border-white/30'
+                        }`}
+                      />
+                      {errors.verilecekSemt && (
+                        <p className="text-red-400 text-sm mt-1">{errors.verilecekSemt}</p>
+                      )}
+                      {/* Dropdown for filtered neighborhoods */}
+                      {formData.verilecekSemt && filteredNeighborhoodsVerilecek.length > 0 && (
+                        <div className="relative z-50">
+                          <div className="absolute top-full left-0 right-0 mt-1 max-h-40 overflow-y-auto bg-white rounded-lg shadow-lg border">
+                            {filteredNeighborhoodsVerilecek.slice(0, 10).map((item, index) => (
+                              <button
+                                key={index}
+                                type="button"
+                                onClick={() => {
+                                  handleInputChange('verilecekSemt', `${item.mahalle} Mh. - ${item.ilce}`) // Set selected neighborhood with Mh. suffix
+                                  setFilteredNeighborhoodsVerilecek([]) // Clear delivery dropdown
+                                }}
+                                className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100"
+                              >
+                                {item.mahalle} Mh. - {item.ilce}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Sizi Alacağımız Tarih ve Saat */}
+                    <div className="grid grid-cols-2 gap-3">
+                      {/* Tarih */}
+                      <div className="space-y-1">
+                        <label className="block text-sm font-medium text-white">
+                          <Clock className="inline h-4 w-4 mr-2" />
+                          Tarih
+                        </label>
+                        <input
+                          type="date"
+                          value={formData.valeTarih}
+                          min={new Date().toISOString().split('T')[0]} // Minimum today
+                          onChange={(e) => {
+                            handleInputChange('valeTarih', e.target.value) // Update valet date
+                            // Clear error when user selects a date
+                            if (errors.valeTarih) {
+                              setErrors(prev => ({ ...prev, valeTarih: '' }))
+                            }
+                          }}
+                          className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                            errors.valeTarih ? 'border-red-400' : 'border-white/30'
+                          }`}
+                        />
+                        {errors.valeTarih && (
+                          <p className="text-red-400 text-sm mt-1">{errors.valeTarih}</p>
+                        )}
+                      </div>
+
+                      {/* Saat */}
+                      <div className="space-y-1">
+                        <label className="block text-sm font-medium text-white">
+                          <Clock className="inline h-4 w-4 mr-2" />
+                          Saat
+                        </label>
+                        <input
+                          type="time"
+                          value={formData.valeSaat}
+                          onChange={(e) => {
+                            handleInputChange('valeSaat', e.target.value) // Update valet time
+                            // Clear error when user selects a time
+                            if (errors.valeSaat) {
+                              setErrors(prev => ({ ...prev, valeSaat: '' }))
+                            }
+                          }}
+                          className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                            errors.valeSaat ? 'border-red-400' : 'border-white/30'
+                          }`}
+                        />
+                        {errors.valeSaat && (
+                          <p className="text-red-400 text-sm mt-1">{errors.valeSaat}</p>
+                        )}
+                      </div>
                     </div>
 
                     {/* Vale Araç Türü */}
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       <label className="block text-sm font-medium text-white">
                         Araç Türü
                       </label>
@@ -637,12 +710,12 @@ const Hero = () => {
                   </>
                 )}
 
-                {/* Teslim Edilecek Semt - For Eczaneden Getir and Vale */}
-                {(formData.hizmetTuru === 'Eczaneden Getir' || formData.hizmetTuru === 'Vale') && (
-                  <div className="space-y-2">
+                {/* Teslim Edilecek Semt - For Eczaneden Getir only */}
+                {formData.hizmetTuru === 'Eczaneden Getir' && (
+                  <div className="space-y-1">
                     <label className="block text-sm font-medium text-white">
                       <MapPin className="inline h-4 w-4 mr-2" />
-                      {formData.hizmetTuru === 'Eczaneden Getir' ? 'İlacın Teslim Edileceği Semt' : 'Teslim Edilecek Semt'}
+                      İlacın Teslim Edileceği Semt
                     </label>
                     <input
                       type="text"
@@ -699,27 +772,6 @@ const Hero = () => {
                   <span>Fiyat Al</span>
                 </button>
               </form>
-            </motion.div>
-
-            {/* Features */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8"
-            >
-              <div className="flex items-center space-x-3">
-                <Clock className="h-6 w-6 text-secondary-400" />
-                <span className="text-sm">30 dk içinde</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Shield className="h-6 w-6 text-secondary-400" />
-                <span className="text-sm">Güvenli teslimat</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-6 w-6 text-secondary-400" />
-                <span className="text-sm">Tüm İstanbul</span>
-              </div>
             </motion.div>
           </motion.div>
 
