@@ -18,7 +18,7 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
         { name: 'Şehirler Arası Kurye', href: '#intercity' }
       ]
     },
-    { name: 'Fiyatlar', href: '#pricing' },
+    { name: 'Abonelik Paketleri', href: '#pricing' },
     { name: 'Hakkımızda', href: '#about' },
     { name: 'İletişim', href: '#contact' }
   ]
@@ -78,7 +78,7 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
                     onClick={() => {
                       if (item.name === 'Ana Sayfa') onNavigation('home')
                       else if (item.name === 'Hizmetlerimiz') onNavigation('services')
-                      else if (item.name === 'Fiyatlar') onNavigation('pricing')
+                      else if (item.name === 'Abonelik Paketleri') onNavigation('pricing')
                       else if (item.name === 'Hakkımızda') onNavigation('about')
                       else if (item.name === 'İletişim') onNavigation('contact')
                     }}
@@ -167,7 +167,7 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
                       onClick={() => {
                         if (item.name === 'Ana Sayfa') onNavigation('home')
                         else if (item.name === 'Hizmetlerimiz') onNavigation('services')
-                        else if (item.name === 'Fiyatlar') onNavigation('pricing')
+                        else if (item.name === 'Abonelik Paketleri') onNavigation('pricing')
                         else if (item.name === 'Hakkımızda') onNavigation('about')
                         else if (item.name === 'İletişim') onNavigation('contact')
                         setIsMenuOpen(false)

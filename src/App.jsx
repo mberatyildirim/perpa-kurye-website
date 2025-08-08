@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -13,19 +13,41 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home')
   const [selectedService, setSelectedService] = useState(null)
   const [selectedRegion, setSelectedRegion] = useState(null)
+  const [scrollTarget, setScrollTarget] = useState(null)
+
+  // useEffect to handle scrolling after page renders
+  useEffect(() => {
+    if (scrollTarget && currentPage === 'home') {
+      console.log('useEffect: Scrolling to target:', scrollTarget) // Debug log
+      const scrollToElement = () => {
+        const element = document.getElementById(scrollTarget)
+        console.log('Element found:', element) // Debug log
+        if (element) {
+          const headerHeight = 80
+          const elementPosition = element.offsetTop - headerHeight
+          console.log('Scrolling to position:', elementPosition) // Debug log
+          window.scrollTo({
+            top: Math.max(0, elementPosition),
+            behavior: 'smooth'
+          })
+          setScrollTarget(null) // Clear scroll target after scrolling
+        }
+      }
+
+      // Multiple attempts to ensure element is rendered
+      const timeouts = [100, 300, 500]
+      timeouts.forEach(delay => {
+        setTimeout(scrollToElement, delay)
+      })
+    }
+  }, [currentPage, scrollTarget])
 
   const handleNavigation = (page) => {
+    console.log('handleNavigation called with page:', page) // Debug log
     setCurrentPage('home')
     setSelectedService(null)
     setSelectedRegion(null)
-    
-    // Ana sayfaya döndükten sonra ilgili bölgeye scroll yap
-    setTimeout(() => {
-      const element = document.getElementById(page)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }, 100)
+    setScrollTarget(page) // Set scroll target for useEffect to handle
   }
 
   const handleServiceClick = (service) => {

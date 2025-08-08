@@ -10,6 +10,11 @@
   body {
     font-family: 'Inter', sans-serif;
   }
+  
+  /* Section scroll offset for sticky header */
+  section[id] {
+    scroll-margin-top: 5rem; /* 80px - header height + padding */
+  }
 }
 
 @layer components {
