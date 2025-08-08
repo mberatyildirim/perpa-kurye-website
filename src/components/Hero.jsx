@@ -772,8 +772,8 @@ const Hero = () => {
                   type="submit"
                   className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"
                 >
-                  <MessageCircle className="h-5 w-5" />
-                  <span>Kurye Çağır</span>
+                  <span  className="text-xl">₺</span>
+                  <span>Fiyat Bilgisi Al</span>
                 </button>
               </form>
             </motion.div>

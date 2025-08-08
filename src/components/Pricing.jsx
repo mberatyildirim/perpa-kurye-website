@@ -25,11 +25,8 @@ const Pricing = () => {
       description: 'Tüm Siparişlerinize %24 İndirim',
       features: [
         'Paket Tutarı: 2,000 ₺',
-        'Siparişin Fiyatı: 921 ₺',
-        'Siparişin İndirimli Fiyatı: 705 ₺',
-        'Sigortalı kargo',
-        'E-posta raporlama',
-        '7/24 destek'
+        'Siparişin Standart Fiyatı: 1000 ₺',
+        'Siparişin İndirimli Fiyatı: 760 ₺'
       ],
       popular: false,
       savings: '24',
@@ -42,12 +39,8 @@ const Pricing = () => {
       description: 'Tüm Siparişlerinize %27 İndirim',
       features: [
         'Paket Tutarı: 5,000 ₺',
-        'Siparişin Fiyatı: 921 ₺',
-        'Siparişin İndirimli Fiyatı: 678 ₺',
-        'Hızlı teslimat önceliği',
-        'Canlı takip sistemi',
-        'SMS bildirim',
-        'Özel müşteri temsilcisi'
+        'Siparişin Standart Fiyatı: 1000 ₺',
+        'Siparişin İndirimli Fiyatı: 730 ₺'
       ],
       popular: true,
       savings: '27',
@@ -60,13 +53,8 @@ const Pricing = () => {
       description: 'Tüm Siparişlerinize %30 İndirim',
       features: [
         'Paket Tutarı: 10,000 ₺',
-        'Siparişin Fiyatı: 921 ₺',
-        'Siparişin İndirimli Fiyatı: 651 ₺',
-        'VIP teslimat önceliği',
-        'Özel araç filosu',
-        'API entegrasyonu',
-        'Özel hesap yöneticisi',
-        '7/24 özel destek'
+        'Siparişin Standart Fiyatı: 1000 ₺',
+        'Siparişin İndirimli Fiyatı: 700 ₺'
       ],
       popular: false,
       savings: '30',
