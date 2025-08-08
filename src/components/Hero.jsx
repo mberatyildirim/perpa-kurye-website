@@ -6,11 +6,14 @@ import { sendHeroData } from '../utils/googleSheets' // Import Google Sheets fun
 const Hero = () => {
   // State management for form fields
   const [formData, setFormData] = useState({
-    hizmetTuru: '', // State for service type
+    hizmetTuru: 'Kurye', // State for service type - Default to Kurye
     alinacakSemt: '', // State for pickup neighborhood
     verilecekSemt: '', // State for delivery neighborhood
     paketBoyutu: '', // State for package size
-    kuryeTipi: '' // State for courier type (motorcycle/car)
+    kuryeTipi: '', // State for courier type (motorcycle/car)
+    ilacIsmi: '', // State for medicine name
+    aracBulunduguSemt: '', // State for car location
+    siziAlacagimizSemt: '' // State for pickup location
   })
 
   // State for form validation errors
@@ -19,7 +22,10 @@ const Hero = () => {
     alinacakSemt: '', // Error message for pickup neighborhood
     verilecekSemt: '', // Error message for delivery neighborhood
     paketBoyutu: '', // Error message for package size
-    kuryeTipi: '' // Error message for courier type
+    kuryeTipi: '', // Error message for courier type
+    ilacIsmi: '', // Error message for medicine name
+    aracBulunduguSemt: '', // Error message for car location
+    siziAlacagimizSemt: '' // Error message for pickup location
   })
 
   // State for neighborhoods data
@@ -85,35 +91,64 @@ const Hero = () => {
       alinacakSemt: '', // Reset pickup error
       verilecekSemt: '', // Reset delivery error
       paketBoyutu: '', // Reset package error
-      kuryeTipi: '' // Reset courier error
+      kuryeTipi: '', // Reset courier error
+      ilacIsmi: '', // Reset medicine name error
+      aracBulunduguSemt: '', // Reset car location error
+      siziAlacagimizSemt: '' // Reset pickup location error
     }
     
     let isValid = true // Track overall validation status
     
-    // Validate each field
+    // Validate service type
     if (!formData.hizmetTuru) {
       newErrors.hizmetTuru = 'Bu alanı doldurunuz' // Set service type error
       isValid = false
     }
     
-    if (!formData.alinacakSemt.trim()) {
-      newErrors.alinacakSemt = 'Bu alanı doldurunuz' // Set pickup error
-      isValid = false
-    }
-    
-    if (!formData.verilecekSemt.trim()) {
-      newErrors.verilecekSemt = 'Bu alanı doldurunuz' // Set delivery error
-      isValid = false
-    }
-    
-    if (!formData.paketBoyutu) {
-      newErrors.paketBoyutu = 'Bu alanı doldurunuz' // Set package error
-      isValid = false
-    }
-    
-    if (!formData.kuryeTipi) {
-      newErrors.kuryeTipi = 'Bu alanı doldurunuz' // Set courier error
-      isValid = false
+    // Validate based on service type
+    if (formData.hizmetTuru === 'Kurye') {
+      if (!formData.alinacakSemt.trim()) {
+        newErrors.alinacakSemt = 'Bu alanı doldurunuz' // Set pickup error
+        isValid = false
+      }
+      if (!formData.verilecekSemt.trim()) {
+        newErrors.verilecekSemt = 'Bu alanı doldurunuz' // Set delivery error
+        isValid = false
+      }
+      if (!formData.paketBoyutu) {
+        newErrors.paketBoyutu = 'Bu alanı doldurunuz' // Set package error
+        isValid = false
+      }
+      if (!formData.kuryeTipi) {
+        newErrors.kuryeTipi = 'Bu alanı doldurunuz' // Set courier error
+        isValid = false
+      }
+    } else if (formData.hizmetTuru === 'Eczaneden Getir') {
+      if (!formData.verilecekSemt.trim()) {
+        newErrors.verilecekSemt = 'Bu alanı doldurunuz' // Set delivery error
+        isValid = false
+      }
+      if (!formData.ilacIsmi.trim()) {
+        newErrors.ilacIsmi = 'Bu alanı doldurunuz' // Set medicine name error
+        isValid = false
+      }
+    } else if (formData.hizmetTuru === 'Vale') {
+      if (!formData.aracBulunduguSemt.trim()) {
+        newErrors.aracBulunduguSemt = 'Bu alanı doldurunuz' // Set car location error
+        isValid = false
+      }
+      if (!formData.siziAlacagimizSemt.trim()) {
+        newErrors.siziAlacagimizSemt = 'Bu alanı doldurunuz' // Set pickup location error
+        isValid = false
+      }
+      if (!formData.verilecekSemt.trim()) {
+        newErrors.verilecekSemt = 'Bu alanı doldurunuz' // Set delivery error
+        isValid = false
+      }
+      if (!formData.kuryeTipi) {
+        newErrors.kuryeTipi = 'Bu alanı doldurunuz' // Set courier error
+        isValid = false
+      }
     }
     
     setErrors(newErrors) // Update error state
@@ -136,12 +171,16 @@ const Hero = () => {
       console.error('Error sending data to Google Sheets:', error) // Log error but continue
     }
 
-    // Create WhatsApp message with form data
-    const message = `Merhaba! 
+    // Create WhatsApp message based on service type
+    let message = `Merhaba! ${formData.hizmetTuru} hizmeti almak istiyorum.\n\n`
     
-${formData.hizmetTuru} hizmeti almak istiyorum.
-
-${formData.alinacakSemt}'den ${formData.verilecekSemt}'e ${formData.paketBoyutu} şekilde ${formData.kuryeTipi} kurye hizmeti.`
+    if (formData.hizmetTuru === 'Kurye') {
+      message += `${formData.alinacakSemt}'den ${formData.verilecekSemt}'e ${formData.paketBoyutu} şekilde ${formData.kuryeTipi} kurye hizmeti.`
+    } else if (formData.hizmetTuru === 'Eczaneden Getir') {
+      message += `İlacın Teslim Edileceği Semt: ${formData.verilecekSemt}\nİlaç İsmi: ${formData.ilacIsmi}`
+    } else if (formData.hizmetTuru === 'Vale') {
+      message += `Aracın Bulunduğu Semt: ${formData.aracBulunduguSemt}\nSizi Alacağımız Semt: ${formData.siziAlacagimizSemt}\nTeslim Edilecek Semt: ${formData.verilecekSemt}\nAraç Türü: ${formData.kuryeTipi}`
+    }
     
     // Encode message for WhatsApp URL
     const encodedMessage = encodeURIComponent(message)
@@ -284,180 +323,378 @@ ${formData.alinacakSemt}'den ${formData.verilecekSemt}'e ${formData.paketBoyutu}
                   )}
                 </div>
 
-                {/* Alınacak Semt */}
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-white">
-                    <MapPin className="inline h-4 w-4 mr-2" />
-                    Alınacak Semt
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.alinacakSemt}
-                    onChange={(e) => {
-                      handleInputChange('alinacakSemt', e.target.value) // Update pickup neighborhood
-                      filterNeighborhoods(e.target.value, 'alinacak') // Filter neighborhoods
-                      // Clear error when user starts typing
-                      if (errors.alinacakSemt) {
-                        setErrors(prev => ({ ...prev, alinacakSemt: '' }))
-                      }
-                    }}
-                    placeholder="Semt seçin..."
-                    className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
-                      errors.alinacakSemt ? 'border-red-400' : 'border-white/30'
-                    }`}
-                  />
-                  {errors.alinacakSemt && (
-                    <p className="text-red-400 text-sm mt-1">{errors.alinacakSemt}</p>
-                  )}
-                  {/* Dropdown for filtered neighborhoods */}
-                  {formData.alinacakSemt && filteredNeighborhoodsAlinacak.length > 0 && (
-                    <div className="relative z-50">
-                      <div className="absolute top-full left-0 right-0 mt-1 max-h-40 overflow-y-auto bg-white rounded-lg shadow-lg border">
-                        {filteredNeighborhoodsAlinacak.slice(0, 10).map((item, index) => (
-                          <button
-                            key={index}
-                            type="button"
-                            onClick={() => {
-                              handleInputChange('alinacakSemt', `${item.mahalle} Mh. - ${item.ilce}`) // Set selected neighborhood with Mh. suffix
-                              setFilteredNeighborhoodsAlinacak([]) // Clear pickup dropdown
-                            }}
-                            className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100"
-                          >
-                            {item.mahalle} Mh. - {item.ilce}
-                          </button>
-                        ))}
-                      </div>
+                {/* Dynamic Form Fields Based on Service Type */}
+                {formData.hizmetTuru === 'Kurye' && (
+                  <>
+                    {/* Alınacak Semt */}
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-white">
+                        <MapPin className="inline h-4 w-4 mr-2" />
+                        Alınacak Semt
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.alinacakSemt}
+                        onChange={(e) => {
+                          handleInputChange('alinacakSemt', e.target.value) // Update pickup neighborhood
+                          filterNeighborhoods(e.target.value, 'alinacak') // Filter neighborhoods
+                          // Clear error when user starts typing
+                          if (errors.alinacakSemt) {
+                            setErrors(prev => ({ ...prev, alinacakSemt: '' }))
+                          }
+                        }}
+                        placeholder="Semt seçin..."
+                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                          errors.alinacakSemt ? 'border-red-400' : 'border-white/30'
+                        }`}
+                      />
+                      {errors.alinacakSemt && (
+                        <p className="text-red-400 text-sm mt-1">{errors.alinacakSemt}</p>
+                      )}
+                      {/* Dropdown for filtered neighborhoods */}
+                      {formData.alinacakSemt && filteredNeighborhoodsAlinacak.length > 0 && (
+                        <div className="relative z-50">
+                          <div className="absolute top-full left-0 right-0 mt-1 max-h-40 overflow-y-auto bg-white rounded-lg shadow-lg border">
+                            {filteredNeighborhoodsAlinacak.slice(0, 10).map((item, index) => (
+                              <button
+                                key={index}
+                                type="button"
+                                onClick={() => {
+                                  handleInputChange('alinacakSemt', `${item.mahalle} Mh. - ${item.ilce}`) // Set selected neighborhood with Mh. suffix
+                                  setFilteredNeighborhoodsAlinacak([]) // Clear pickup dropdown
+                                }}
+                                className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100"
+                              >
+                                {item.mahalle} Mh. - {item.ilce}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
 
-                {/* Verilecek Semt */}
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-white">
-                    <MapPin className="inline h-4 w-4 mr-2" />
-                    Verilecek Semt
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.verilecekSemt}
-                    onChange={(e) => {
-                      handleInputChange('verilecekSemt', e.target.value) // Update delivery neighborhood
-                      filterNeighborhoods(e.target.value, 'verilecek') // Filter neighborhoods
-                      // Clear error when user starts typing
-                      if (errors.verilecekSemt) {
-                        setErrors(prev => ({ ...prev, verilecekSemt: '' }))
-                      }
-                    }}
-                    placeholder="Semt seçin..."
-                    className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
-                      errors.verilecekSemt ? 'border-red-400' : 'border-white/30'
-                    }`}
-                  />
-                  {errors.verilecekSemt && (
-                    <p className="text-red-400 text-sm mt-1">{errors.verilecekSemt}</p>
-                  )}
-                  {/* Dropdown for filtered neighborhoods */}
-                  {formData.verilecekSemt && filteredNeighborhoodsVerilecek.length > 0 && (
-                    <div className="relative z-50">
-                      <div className="absolute top-full left-0 right-0 mt-1 max-h-40 overflow-y-auto bg-white rounded-lg shadow-lg border">
-                        {filteredNeighborhoodsVerilecek.slice(0, 10).map((item, index) => (
-                          <button
-                            key={index}
-                            type="button"
-                            onClick={() => {
-                              handleInputChange('verilecekSemt', `${item.mahalle} Mh. - ${item.ilce}`) // Set selected neighborhood with Mh. suffix
-                              setFilteredNeighborhoodsVerilecek([]) // Clear delivery dropdown
-                            }}
-                            className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100"
-                          >
-                            {item.mahalle} Mh. - {item.ilce}
-                          </button>
-                        ))}
-                      </div>
+                    {/* Teslim Edilecek Semt - For Kurye only */}
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-white">
+                        <MapPin className="inline h-4 w-4 mr-2" />
+                        Teslim Edilecek Semt
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.verilecekSemt}
+                        onChange={(e) => {
+                          handleInputChange('verilecekSemt', e.target.value) // Update delivery neighborhood
+                          filterNeighborhoods(e.target.value, 'verilecek') // Filter neighborhoods
+                          // Clear error when user starts typing
+                          if (errors.verilecekSemt) {
+                            setErrors(prev => ({ ...prev, verilecekSemt: '' }))
+                          }
+                        }}
+                        placeholder="Semt seçin..."
+                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                          errors.verilecekSemt ? 'border-red-400' : 'border-white/30'
+                        }`}
+                      />
+                      {errors.verilecekSemt && (
+                        <p className="text-red-400 text-sm mt-1">{errors.verilecekSemt}</p>
+                      )}
+                      {/* Dropdown for filtered neighborhoods */}
+                      {formData.verilecekSemt && filteredNeighborhoodsVerilecek.length > 0 && (
+                        <div className="relative z-50">
+                          <div className="absolute top-full left-0 right-0 mt-1 max-h-40 overflow-y-auto bg-white rounded-lg shadow-lg border">
+                            {filteredNeighborhoodsVerilecek.slice(0, 10).map((item, index) => (
+                              <button
+                                key={index}
+                                type="button"
+                                onClick={() => {
+                                  handleInputChange('verilecekSemt', `${item.mahalle} Mh. - ${item.ilce}`) // Set selected neighborhood with Mh. suffix
+                                  setFilteredNeighborhoodsVerilecek([]) // Clear delivery dropdown
+                                }}
+                                className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100"
+                              >
+                                {item.mahalle} Mh. - {item.ilce}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
 
-                {/* Paket Boyutu */}
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-white">
-                    <Package className="inline h-4 w-4 mr-2" />
-                    Paket Boyutu
-                  </label>
-                  <select
-                    value={formData.paketBoyutu}
-                    onChange={(e) => {
-                      handleInputChange('paketBoyutu', e.target.value) // Update package size
-                      // Clear error when user selects an option
-                      if (errors.paketBoyutu) {
-                        setErrors(prev => ({ ...prev, paketBoyutu: '' }))
-                      }
-                    }}
-                    className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
-                      errors.paketBoyutu ? 'border-red-400' : 'border-white/30'
-                    }`}
-                  >
-                    <option value="">Paket boyutu seçin</option>
-                                          <option value="Küçük Paket">Küçük Paket</option>
-                      <option value="Orta Paket">Orta Paket</option>
-                      <option value="Büyük Paket">Büyük Paket</option>
-                    </select>
-                    {errors.paketBoyutu && (
-                      <p className="text-red-400 text-sm mt-1">{errors.paketBoyutu}</p>
+                    {/* Paket Boyutu */}
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-white">
+                        <Package className="inline h-4 w-4 mr-2" />
+                        Paket Boyutu
+                      </label>
+                      <select
+                        value={formData.paketBoyutu}
+                        onChange={(e) => {
+                          handleInputChange('paketBoyutu', e.target.value) // Update package size
+                          // Clear error when user selects an option
+                          if (errors.paketBoyutu) {
+                            setErrors(prev => ({ ...prev, paketBoyutu: '' }))
+                          }
+                        }}
+                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                          errors.paketBoyutu ? 'border-red-400' : 'border-white/30'
+                        }`}
+                      >
+                        <option value="">Paket boyutu seçin</option>
+                        <option value="Küçük">Küçük</option>
+                        <option value="Orta">Orta</option>
+                        <option value="Büyük">Büyük</option>
+                      </select>
+                      {errors.paketBoyutu && (
+                        <p className="text-red-400 text-sm mt-1">{errors.paketBoyutu}</p>
+                      )}
+                    </div>
+
+                    {/* Kurye Tipi */}
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-white">
+                        Kurye Tipi
+                      </label>
+                      <div className="grid grid-cols-2 gap-3">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            handleInputChange('kuryeTipi', 'Motorlu') // Set motorcycle courier
+                            // Clear error when user selects an option
+                            if (errors.kuryeTipi) {
+                              setErrors(prev => ({ ...prev, kuryeTipi: '' }))
+                            }
+                          }}
+                          className={`p-3 rounded-lg border-2 transition-all ${
+                            formData.kuryeTipi === 'Motorlu'
+                              ? 'border-secondary-400 bg-secondary-400/20'
+                              : errors.kuryeTipi 
+                                ? 'border-red-400 bg-white/10'
+                                : 'border-white/30 bg-white/10 hover:bg-white/20'
+                          }`}
+                        >
+                          <Bike className="h-6 w-6 mx-auto mb-2" />
+                          <span className="text-sm">Motorlu</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            handleInputChange('kuryeTipi', 'Arabalı') // Set car courier
+                            // Clear error when user selects an option
+                            if (errors.kuryeTipi) {
+                              setErrors(prev => ({ ...prev, kuryeTipi: '' }))
+                            }
+                          }}
+                          className={`p-3 rounded-lg border-2 transition-all ${
+                            formData.kuryeTipi === 'Arabalı'
+                              ? 'border-secondary-400 bg-secondary-400/20'
+                              : errors.kuryeTipi 
+                                ? 'border-red-400 bg-white/10'
+                                : 'border-white/30 bg-white/10 hover:bg-white/20'
+                          }`}
+                        >
+                          <Car className="h-6 w-6 mx-auto mb-2" />
+                          <span className="text-sm">Arabalı</span>
+                        </button>
+                      </div>
+                      {errors.kuryeTipi && (
+                        <p className="text-red-400 text-sm mt-1">{errors.kuryeTipi}</p>
+                      )}
+                    </div>
+                  </>
+                )}
+
+                {/* Eczaneden Getir Fields */}
+                {formData.hizmetTuru === 'Eczaneden Getir' && (
+                  <>
+                    {/* İlaç İsmi */}
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-white">
+                        <Pill className="inline h-4 w-4 mr-2" />
+                        İlaç İsmi
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.ilacIsmi}
+                        onChange={(e) => {
+                          handleInputChange('ilacIsmi', e.target.value) // Update medicine name
+                          // Clear error when user starts typing
+                          if (errors.ilacIsmi) {
+                            setErrors(prev => ({ ...prev, ilacIsmi: '' }))
+                          }
+                        }}
+                        placeholder="İlaç ismini yazın..."
+                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                          errors.ilacIsmi ? 'border-red-400' : 'border-white/30'
+                        }`}
+                      />
+                      {errors.ilacIsmi && (
+                        <p className="text-red-400 text-sm mt-1">{errors.ilacIsmi}</p>
+                      )}
+                    </div>
+                  </>
+                )}
+
+                {/* Vale Fields */}
+                {formData.hizmetTuru === 'Vale' && (
+                  <>
+                    {/* Aracın Bulunduğu Semt */}
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-white">
+                        <MapPin className="inline h-4 w-4 mr-2" />
+                        Aracın Bulunduğu Semt
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.aracBulunduguSemt}
+                        onChange={(e) => {
+                          handleInputChange('aracBulunduguSemt', e.target.value) // Update car location
+                          // Clear error when user starts typing
+                          if (errors.aracBulunduguSemt) {
+                            setErrors(prev => ({ ...prev, aracBulunduguSemt: '' }))
+                          }
+                        }}
+                        placeholder="Aracın bulunduğu semti yazın..."
+                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                          errors.aracBulunduguSemt ? 'border-red-400' : 'border-white/30'
+                        }`}
+                      />
+                      {errors.aracBulunduguSemt && (
+                        <p className="text-red-400 text-sm mt-1">{errors.aracBulunduguSemt}</p>
+                      )}
+                    </div>
+
+                    {/* Sizi Alacağımız Semt */}
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-white">
+                        <MapPin className="inline h-4 w-4 mr-2" />
+                        Sizi Alacağımız Semt
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.siziAlacagimizSemt}
+                        onChange={(e) => {
+                          handleInputChange('siziAlacagimizSemt', e.target.value) // Update pickup location
+                          // Clear error when user starts typing
+                          if (errors.siziAlacagimizSemt) {
+                            setErrors(prev => ({ ...prev, siziAlacagimizSemt: '' }))
+                          }
+                        }}
+                        placeholder="Sizi alacağımız semti yazın..."
+                        className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                          errors.siziAlacagimizSemt ? 'border-red-400' : 'border-white/30'
+                        }`}
+                      />
+                      {errors.siziAlacagimizSemt && (
+                        <p className="text-red-400 text-sm mt-1">{errors.siziAlacagimizSemt}</p>
+                      )}
+                    </div>
+
+                    {/* Vale Araç Türü */}
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-white">
+                        Araç Türü
+                      </label>
+                      <div className="grid grid-cols-2 gap-3">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            handleInputChange('kuryeTipi', 'Motor') // Set motorcycle
+                            // Clear error when user selects an option
+                            if (errors.kuryeTipi) {
+                              setErrors(prev => ({ ...prev, kuryeTipi: '' }))
+                            }
+                          }}
+                          className={`p-3 rounded-lg border-2 transition-all ${
+                            formData.kuryeTipi === 'Motor'
+                              ? 'border-secondary-400 bg-secondary-400/20'
+                              : errors.kuryeTipi 
+                                ? 'border-red-400 bg-white/10'
+                                : 'border-white/30 bg-white/10 hover:bg-white/20'
+                          }`}
+                        >
+                          <Bike className="h-6 w-6 mx-auto mb-2" />
+                          <span className="text-sm">Motor</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            handleInputChange('kuryeTipi', 'Araba') // Set car
+                            // Clear error when user selects an option
+                            if (errors.kuryeTipi) {
+                              setErrors(prev => ({ ...prev, kuryeTipi: '' }))
+                            }
+                          }}
+                          className={`p-3 rounded-lg border-2 transition-all ${
+                            formData.kuryeTipi === 'Araba'
+                              ? 'border-secondary-400 bg-secondary-400/20'
+                              : errors.kuryeTipi 
+                                ? 'border-red-400 bg-white/10'
+                                : 'border-white/30 bg-white/10 hover:bg-white/20'
+                          }`}
+                        >
+                          <Car className="h-6 w-6 mx-auto mb-2" />
+                          <span className="text-sm">Araba</span>
+                        </button>
+                      </div>
+                      {errors.kuryeTipi && (
+                        <p className="text-red-400 text-sm mt-1">{errors.kuryeTipi}</p>
+                      )}
+                    </div>
+                  </>
+                )}
+
+                {/* Teslim Edilecek Semt - For Eczaneden Getir and Vale */}
+                {(formData.hizmetTuru === 'Eczaneden Getir' || formData.hizmetTuru === 'Vale') && (
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-white">
+                      <MapPin className="inline h-4 w-4 mr-2" />
+                      {formData.hizmetTuru === 'Eczaneden Getir' ? 'İlacın Teslim Edileceği Semt' : 'Teslim Edilecek Semt'}
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.verilecekSemt}
+                      onChange={(e) => {
+                        handleInputChange('verilecekSemt', e.target.value) // Update delivery neighborhood
+                        filterNeighborhoods(e.target.value, 'verilecek') // Filter neighborhoods
+                        // Clear error when user starts typing
+                        if (errors.verilecekSemt) {
+                          setErrors(prev => ({ ...prev, verilecekSemt: '' }))
+                        }
+                      }}
+                      placeholder="Semt seçin..."
+                      className={`w-full px-4 py-3 rounded-lg bg-white/20 border text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-400 ${
+                        errors.verilecekSemt ? 'border-red-400' : 'border-white/30'
+                      }`}
+                    />
+                    {errors.verilecekSemt && (
+                      <p className="text-red-400 text-sm mt-1">{errors.verilecekSemt}</p>
+                    )}
+                    {/* Dropdown for filtered neighborhoods */}
+                    {formData.verilecekSemt && filteredNeighborhoodsVerilecek.length > 0 && (
+                      <div className="relative z-50">
+                        <div className="absolute top-full left-0 right-0 mt-1 max-h-40 overflow-y-auto bg-white rounded-lg shadow-lg border">
+                          {filteredNeighborhoodsVerilecek.slice(0, 10).map((item, index) => (
+                            <button
+                              key={index}
+                              type="button"
+                              onClick={() => {
+                                handleInputChange('verilecekSemt', `${item.mahalle} Mh. - ${item.ilce}`) // Set selected neighborhood with Mh. suffix
+                                setFilteredNeighborhoodsVerilecek([]) // Clear delivery dropdown
+                              }}
+                              className="w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100"
+                            >
+                              {item.mahalle} Mh. - {item.ilce}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
                     )}
                   </div>
+                )}
 
-                {/* Kurye Tipi */}
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-white">
-                    Kurye Tipi
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        handleInputChange('kuryeTipi', 'Motorlu') // Set motorcycle courier
-                        // Clear error when user selects an option
-                        if (errors.kuryeTipi) {
-                          setErrors(prev => ({ ...prev, kuryeTipi: '' }))
-                        }
-                      }}
-                      className={`p-3 rounded-lg border-2 transition-all ${
-                        formData.kuryeTipi === 'Motorlu'
-                          ? 'border-secondary-400 bg-secondary-400/20'
-                          : errors.kuryeTipi 
-                            ? 'border-red-400 bg-white/10'
-                            : 'border-white/30 bg-white/10 hover:bg-white/20'
-                      }`}
-                    >
-                      <Bike className="h-6 w-6 mx-auto mb-2" />
-                      <span className="text-sm">Motorlu</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        handleInputChange('kuryeTipi', 'Arabalı') // Set car courier
-                        // Clear error when user selects an option
-                        if (errors.kuryeTipi) {
-                          setErrors(prev => ({ ...prev, kuryeTipi: '' }))
-                        }
-                      }}
-                      className={`p-3 rounded-lg border-2 transition-all ${
-                        formData.kuryeTipi === 'Arabalı'
-                          ? 'border-secondary-400 bg-secondary-400/20'
-                          : errors.kuryeTipi 
-                            ? 'border-red-400 bg-white/10'
-                            : 'border-white/30 bg-white/10 hover:bg-white/20'
-                      }`}
-                    >
-                      <Car className="h-6 w-6 mx-auto mb-2" />
-                      <span className="text-sm">Arabalı</span>
-                    </button>
-                  </div>
-                  {errors.kuryeTipi && (
-                    <p className="text-red-400 text-sm mt-1">{errors.kuryeTipi}</p>
-                  )}
-                </div>
+
+
+
 
                 {/* Submit Button */}
                 <button
