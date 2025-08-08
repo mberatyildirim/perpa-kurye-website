@@ -115,7 +115,7 @@ const Services = ({ onServiceClick }) => {
                   className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 mt-6"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  <span>Kurye Çağır</span>
+                  <span>Bilgi Al</span>
                 </button>
               </div>
             </motion.div>
@@ -146,13 +146,17 @@ const Services = ({ onServiceClick }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="flex items-start space-x-4"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
-                <Clock className="h-6 w-6" />
+              <div className="flex-shrink-0">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full">
+                  <Clock className="h-6 w-6" />
+                </div>
               </div>
-              <h4 className="font-bold text-lg mb-2">30 Dakika İçinde</h4>
-              <p className="text-primary-100 text-sm">Kurye kapınızda</p>
+              <div className="flex-1">
+                <h4 className="font-bold text-lg mb-2">Hızlı Teslimat</h4>
+                <p className="text-primary-100 text-sm">Şehir içi ve şehirlerarası gönderileriniz en kısa sürede adrese ulaşır.</p>
+              </div>
             </motion.div>
 
             {/* Feature 2 */}
@@ -161,28 +165,36 @@ const Services = ({ onServiceClick }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="flex items-start space-x-4"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
-                <Shield className="h-6 w-6" />
+              <div className="flex-shrink-0">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full">
+                  <Shield className="h-6 w-6" />
+                </div>
               </div>
-              <h4 className="font-bold text-lg mb-2">Güvenli Teslimat</h4>
-              <p className="text-primary-100 text-sm">Sigortalı kargo</p>
+              <div className="flex-1">
+                <h4 className="font-bold text-lg mb-2">Uygun Fiyat Politikası</h4>
+                <p className="text-primary-100 text-sm">Semt ve mahalle bazlı fiyatlandırma ile sürpriz maliyet yok.</p>
+              </div>
             </motion.div>
 
-            {/* Feature 3 */}
+            {/* Feature 3 - Combined */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="flex items-start space-x-4"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
-                <MapPin className="h-6 w-6" />
+              <div className="flex-shrink-0">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full">
+                  <MapPin className="h-6 w-6" />
+                </div>
               </div>
-              <h4 className="font-bold text-lg mb-2">Tüm İstanbul</h4>
-              <p className="text-primary-100 text-sm">Her noktaya hizmet</p>
+              <div className="flex-1">
+                <h4 className="font-bold text-lg mb-2">Geniş Hizmet Ağı ve Çeşitli Teslimat Seçenekleri</h4>
+                <p className="text-primary-100 text-sm">İstanbul başta olmak üzere Türkiye'nin her noktasına ihtiyacınıza yönelik çeşitli hizmetler veriyoruz.</p>
+              </div>
             </motion.div>
 
             {/* Feature 4 */}
@@ -191,13 +203,17 @@ const Services = ({ onServiceClick }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="flex items-start space-x-4"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
-                <Zap className="h-6 w-6" />
+              <div className="flex-shrink-0">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full">
+                  <Zap className="h-6 w-6" />
+                </div>
               </div>
-              <h4 className="font-bold text-lg mb-2">7/24 Hizmet</h4>
-              <p className="text-primary-100 text-sm">Gece gündüz yanınızdayız</p>
+              <div className="flex-1">
+                <h4 className="font-bold text-lg mb-2">7/24 Hizmet</h4>
+                <p className="text-primary-100 text-sm">Günün her saati iletişim kurabileceğiniz müşteri hizmetleri.</p>
+              </div>
             </motion.div>
           </div>
         </motion.div>

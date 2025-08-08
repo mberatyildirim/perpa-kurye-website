@@ -217,7 +217,7 @@ const Footer = () => {
           className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2"
         >
           <MessageCircle className="h-5 w-5" />
-          <span className="font-medium">Kurye Çağır</span>
+          <span className="font-medium">Whatsapp ile Kurye Çağır</span>
         </a>
       </motion.div>
     </footer>

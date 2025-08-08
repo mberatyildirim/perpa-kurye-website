@@ -1,61 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
-import { Check, Star, Clock, Bike, Plane, Crown } from 'lucide-react'
+import { Check, Star, Clock, Bike, Plane, Crown, MessageCircle } from 'lucide-react'
 
 const Pricing = () => {
-  const [activeTab, setActiveTab] = useState('packages')
-
-  const packages = [
-    {
-      name: 'Perpa Standart Kurye',
-      price: '300',
-      originalPrice: '400',
-      description: 'Temel kurye hizmeti',
-      features: [
-        '30 dk içinde kurye kapında',
-        'En yakın mesafe 180 dk',
-        'En uzak mesafe 240 dk',
-        'Sigortalı kargo',
-        '7/24 destek'
-      ],
-      popular: false,
-      icon: Bike
-    },
-    {
-      name: 'Perpa Ekspres Kurye',
-      price: '500',
-      originalPrice: '650',
-      description: 'Hızlı teslimat hizmeti',
-      features: [
-        '30 dk içinde kurye kapında',
-        'En yakın mesafe 120 dk',
-        'En uzak mesafe 180 dk',
-        'Öncelikli teslimat',
-        'SMS bildirim',
-        'Sigortalı kargo'
-      ],
-      popular: true,
-      icon: Clock
-    },
-    {
-      name: 'Perpa VIP Kurye',
-      price: '600',
-      originalPrice: '800',
-      description: 'Premium kurye hizmeti',
-      features: [
-        '30 dk içinde kurye kapında',
-        'En yakın mesafe 60 dk',
-        'En uzak mesafe 90 dk',
-        'Özel araç',
-        'Canlı takip',
-        'Öncelikli teslimat',
-        'SMS bildirim',
-        'Sigortalı kargo'
-      ],
-      popular: false,
-      icon: Crown
-    }
-  ]
+  // Function to handle WhatsApp redirect with package information
+  const handleWhatsAppClick = (packageName, price, savings) => {
+    const message = `Merhaba! ${packageName} paketi hakkında bilgi almak istiyorum. Fiyat: ${price}₺, İndirim: %${savings}`
+    const encodedMessage = encodeURIComponent(message)
+    const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}`
+    window.open(whatsappUrl, '_blank')
+  }
 
   const subscriptions = [
     {
@@ -72,7 +26,7 @@ const Pricing = () => {
         '7/24 destek'
       ],
       popular: false,
-      savings: '24%',
+      savings: '24',
       icon: Bike
     },
     {
@@ -90,7 +44,7 @@ const Pricing = () => {
         'Özel müşteri temsilcisi'
       ],
       popular: true,
-      savings: '27%',
+      savings: '27',
       icon: Crown
     },
     {
@@ -109,7 +63,7 @@ const Pricing = () => {
         '7/24 özel destek'
       ],
       popular: false,
-      savings: '30%',
+      savings: '30',
       icon: Star
     }
   ]
@@ -135,46 +89,21 @@ const Pricing = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Fiyatlandırma
+            Abonelik Paketleri
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            İhtiyacınıza uygun fiyat seçeneklerimizi keşfedin
+            Ön ödeme ile indirimli gönderim avantajlarından yararlanın. Kurumsal müşterilerimiz için özel olarak tasarlanmış paketlerimiz ile operasyonel maliyetlerinizi optimize edin ve teslimat süreçlerinizi hızlandırın.
           </p>
-
-          {/* Tab Switcher */}
-          <div className="inline-flex bg-white rounded-lg p-1 shadow-md">
-            <button
-              onClick={() => setActiveTab('packages')}
-              className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
-                activeTab === 'packages'
-                  ? 'bg-primary-600 text-white shadow-md'
-                  : 'text-gray-600 hover:text-primary-600'
-              }`}
-            >
-              Tekil Hizmetler
-            </button>
-            <button
-              onClick={() => setActiveTab('subscriptions')}
-              className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
-                activeTab === 'subscriptions'
-                  ? 'bg-primary-600 text-white shadow-md'
-                  : 'text-gray-600 hover:text-primary-600'
-              }`}
-            >
-              Abonelik Paketleri
-            </button>
-          </div>
         </motion.div>
 
         {/* Pricing Cards */}
         <motion.div
-          key={activeTab}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="grid md:grid-cols-3 gap-8"
         >
-          {(activeTab === 'packages' ? packages : subscriptions).map((item, index) => (
+          {subscriptions.map((item, index) => (
             <motion.div
               key={item.name}
               initial={{ opacity: 0, y: 30 }}
@@ -202,27 +131,13 @@ const Pricing = () => {
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center justify-center">
                     <span className="text-4xl font-bold text-gray-900">{item.price}₺</span>
-                    {activeTab === 'subscriptions' && (
-                      <span className="text-gray-500 ml-2">/{item.period}</span>
-                    )}
+                    <span className="text-gray-500 ml-2">/{item.period}</span>
                   </div>
-                  {activeTab === 'subscriptions' && (
-                    <div className="flex items-center justify-center">
-                      <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                        {item.savings} İndirim
-                      </span>
-                    </div>
-                  )}
-                  {item.originalPrice && (
-                    <div className="flex items-center justify-center space-x-2">
-                      <span className="text-lg text-gray-400 line-through">{item.originalPrice}₺</span>
-                      {item.savings && (
-                        <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-medium">
-                          {item.savings} Tasarruf
-                        </span>
-                      )}
-                    </div>
-                  )}
+                  <div className="flex items-center justify-center">
+                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {item.savings}% İndirim
+                    </span>
+                  </div>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
 
@@ -235,8 +150,12 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <button className="w-full btn-primary mt-auto">
-                  {activeTab === 'packages' ? 'Fiyat Teklifi Al' : 'Paketi Seç'}
+                <button 
+                  onClick={() => handleWhatsAppClick(item.name, item.price, item.savings)}
+                  className="w-full bg-primary-500 hover:bg-primary-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 mt-auto"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  <span>Paket Hakkında Bilgi Al</span>
                 </button>
               </div>
             </motion.div>
@@ -253,23 +172,23 @@ const Pricing = () => {
         >
           <div className="bg-white rounded-xl p-8 shadow-lg">
             <h3 className="text-xl font-bold text-gray-900 mb-4">
-              Özel İndirimler ve Kampanyalar
+              Kurumsal Avantajlar
             </h3>
             <p className="text-gray-600 mb-6">
-              Düzenli müşterilerimiz için özel fiyatlar ve kampanyalar sunuyoruz.
+              Ön ödeme paketlerimiz ile nakit akışınızı optimize edin ve operasyonel maliyetlerinizi düşürün.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div className="flex items-center justify-center">
                 <Star className="h-5 w-5 text-yellow-500 mr-2" />
-                <span>Düzenli müşteri indirimi</span>
+                <span>Nakit akışı optimizasyonu</span>
               </div>
               <div className="flex items-center justify-center">
                 <Bike className="h-5 w-5 text-primary-600 mr-2" />
-                <span>Toplu gönderi indirimi</span>
+                <span>Operasyonel maliyet düşürme</span>
               </div>
               <div className="flex items-center justify-center">
                 <Plane className="h-5 w-5 text-secondary-600 mr-2" />
-                <span>Şehirler arası özel fiyatlar</span>
+                <span>Kurumsal özel fiyatlar</span>
               </div>
             </div>
           </div>

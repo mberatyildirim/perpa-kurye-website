@@ -56,25 +56,39 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* About Image */}
+            {/* Rakamlarla Perpa Kurye - Mobile Only */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
+              className="lg:hidden"
             >
-              <img 
-                src="/images/about/team.jpg" 
-                alt="Perpa Kurye Ekibi" 
-                className="w-full h-80 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-xl font-bold">Profesyonel Ekip</h3>
-                <p className="text-white/80">Deneyimli kurye ekibimiz</p>
+              <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-6 text-white">
+                <h3 className="text-xl font-bold mb-6 text-center">
+                  Rakamlarla Perpa Kurye
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="text-center"
+                    >
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-3">
+                        <stat.icon className="h-6 w-6" />
+                      </div>
+                      <div className="text-2xl font-bold mb-1">{stat.number}</div>
+                      <div className="text-primary-100 text-sm">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </motion.div>
+
             <div className="space-y-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
                 Hakkımızda
@@ -118,13 +132,13 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Stats */}
+          {/* Stats - Desktop Only */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-8 hidden lg:block"
           >
             <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-6 sm:p-8 text-white">
               <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">
