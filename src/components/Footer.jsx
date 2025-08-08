@@ -3,8 +3,6 @@ import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Clock, Bike, MessageCircle } from 'lucide-react'
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
-
   const quickLinks = [
     { name: 'Ana Sayfa', href: '#home' },
     { name: 'Hizmetlerimiz', href: '#services' },
@@ -177,8 +175,6 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <Clock className="h-5 w-5 text-primary-400" />
                   <div className="text-gray-300">
-                    <div>Hafta içi: <strong>09:00 - 18:00</strong></div>
-                    <div>Hafta sonu: <strong>09:00 - 15:00</strong></div>
                     <div className="text-primary-400 font-medium">7/24 hizmetimiz mevcuttur</div>
                   </div>
                 </div>
@@ -197,7 +193,7 @@ const Footer = () => {
         >
           <div className="flex justify-center items-center">
             <div className="text-gray-400 text-sm">
-              © {currentYear} <strong>Perpa Kurye</strong> Tüm hakları saklıdır.
+              © 2025 <strong>Perpa Kurye</strong> Tüm hakları saklıdır.
             </div>
           </div>
         </motion.div>

@@ -59,17 +59,41 @@ function App() {
       setSelectedService(service)
       setCurrentPage('service-detail')
     }
+    
+    // Scroll to top after page change
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }, 100)
   }
 
   const handleRegionClick = (region) => {
     setSelectedRegion(region)
     setCurrentPage('region-detail')
+    
+    // Scroll to top after page change
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }, 100)
   }
 
   const handleBack = () => {
     setCurrentPage('home')
     setSelectedService(null)
     setSelectedRegion(null)
+    
+    // Scroll to top when going back to home
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }, 100)
   }
 
   const renderPage = () => {
