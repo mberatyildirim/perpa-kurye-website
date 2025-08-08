@@ -13,9 +13,9 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
       name: 'Bölgeler', 
       href: '#regions',
       submenu: [
-        { name: 'Anadolu Yakası', href: '#anatolian-side' },
-        { name: 'Avrupa Yakası', href: '#european-side' },
-        { name: 'Şehirler Arası', href: '#intercity' }
+        { name: 'Anadolu Yakası Kurye', href: '#anatolian-side' },
+        { name: 'Avrupa Yakası Kurye', href: '#european-side' },
+        { name: 'Şehirler Arası Kurye', href: '#intercity' }
       ]
     },
     { name: 'Fiyatlar', href: '#pricing' },
@@ -59,9 +59,9 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
                             key={subitem.name}
                             onClick={() => {
                               const regionMap = {
-                                'Anadolu Yakası': 'anatolian-side',
-                                'Avrupa Yakası': 'european-side',
-                                'Şehirler Arası': 'intercity'
+                                'Anadolu Yakası Kurye': 'anatolian-side',
+                                'Avrupa Yakası Kurye': 'european-side',
+                                'Şehirler Arası Kurye': 'intercity'
                               }
                               onRegionClick(regionMap[subitem.name])
                             }}
@@ -100,7 +100,7 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
               className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center"
             >
               <MessageCircle className="h-4 w-4 mr-2" />
-              Kurye Çağır
+              Whatsapp
             </a>
           </div>
 
@@ -146,9 +146,9 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
                               key={subitem.name}
                               onClick={() => {
                                 const regionMap = {
-                                  'Anadolu Yakası': 'anatolian-side',
-                                  'Avrupa Yakası': 'european-side',
-                                  'Şehirler Arası': 'intercity'
+                                  'Anadolu Yakası Kurye': 'anatolian-side',
+                                  'Avrupa Yakası Kurye': 'european-side',
+                                  'Şehirler Arası Kurye': 'intercity'
                                 }
                                 onRegionClick(regionMap[subitem.name])
                                 setIsMenuOpen(false)

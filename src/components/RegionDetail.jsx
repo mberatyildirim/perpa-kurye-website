@@ -5,7 +5,7 @@ import { ArrowLeft, MapPin, Clock, Phone, Truck } from 'lucide-react'
 const RegionDetail = ({ region, onBack }) => {
   const regionDetails = {
     'anatolian-side': {
-      title: 'Anadolu Yakası',
+      title: 'Anadolu Yakası Kurye',
       description: 'İstanbul Anadolu yakasının tüm ilçelerinde kurye hizmeti',
       icon: MapPin,
       districts: [
@@ -26,7 +26,7 @@ const RegionDetail = ({ region, onBack }) => {
       }
     },
     'european-side': {
-      title: 'Avrupa Yakası',
+      title: 'Avrupa Yakası Kurye',
       description: 'İstanbul Avrupa yakasının tüm ilçelerinde kurye hizmeti',
       icon: MapPin,
       districts: [
@@ -50,7 +50,7 @@ const RegionDetail = ({ region, onBack }) => {
       }
     },
     'intercity': {
-      title: 'Şehirler Arası',
+      title: 'Şehirler Arası Kurye',
       description: 'Türkiye\'nin her yerine şehirler arası kurye hizmeti',
       icon: Truck,
       districts: [
@@ -128,29 +128,12 @@ const RegionDetail = ({ region, onBack }) => {
                     className="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm"
                   >
                     <MapPin className="h-4 w-4 text-primary-500" />
-                    <span className="text-gray-700">{district}</span>
+                    <span className="text-gray-700">{district} Kurye</span>
                   </motion.div>
                 ))}
               </div>
             </div>
 
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Özellikler</h2>
-              <div className="space-y-4">
-                {detail.features.map((feature, index) => (
-                  <motion.div
-                    key={feature}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-center space-x-3"
-                  >
-                    <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                    <span className="text-gray-700">{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Pricing & Contact */}
@@ -160,45 +143,18 @@ const RegionDetail = ({ region, onBack }) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Fiyatlandırma</h2>
-              <div className="space-y-4">
-                {Object.entries(detail.pricing).map(([key, value], index) => (
-                  <motion.div
-                    key={key}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-lg p-4 shadow-md border border-gray-100"
-                  >
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-gray-900">{key}</span>
-                      <span className="text-2xl font-bold text-primary-600">{value}</span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
 
             <div className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Hemen İletişime Geç</h3>
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+                  href="https://wa.me/905555745356?text=Kurye%20hizmeti%20almak%20istiyorum."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full btn-primary flex items-center justify-center"
                 >
                   <Phone className="h-5 w-5 mr-2" />
                   Kurye Çağır
-                </a>
-                <a
-                  href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-white text-primary-600 border border-primary-600 hover:bg-primary-50 font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center"
-                >
-                  Fiyat Teklifi Al
                 </a>
               </div>
             </div>
