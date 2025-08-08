@@ -123,7 +123,9 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:05555745356"
+              href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary flex items-center"
             >
               <Phone className="h-4 w-4 mr-2" />
@@ -166,7 +168,9 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
                 </a>
               ))}
               <a
-                href="tel:05555745356"
+                href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >

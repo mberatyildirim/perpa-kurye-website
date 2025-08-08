@@ -184,15 +184,22 @@ const RegionDetail = ({ region, onBack }) => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Hemen İletişime Geç</h3>
               <div className="space-y-3">
                 <a
-                  href="tel:05555745356"
+                  href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full btn-primary flex items-center justify-center"
                 >
                   <Phone className="h-5 w-5 mr-2" />
                   Kurye Çağır
                 </a>
-                <button className="w-full bg-white text-primary-600 border border-primary-600 hover:bg-primary-50 font-medium py-3 px-6 rounded-lg transition-all duration-200">
+                <a
+                  href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-white text-primary-600 border border-primary-600 hover:bg-primary-50 font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center"
+                >
                   Fiyat Teklifi Al
-                </button>
+                </a>
               </div>
             </div>
           </motion.div>

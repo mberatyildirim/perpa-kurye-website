@@ -9,21 +9,18 @@ const Services = ({ onServiceClick }) => {
     {
       icon: Bike, // Icon for courier service
       title: 'Kurye', // Service title
-      description: 'İstanbul\'un her noktasına hızlı ve güvenli kurye hizmeti. Evrak, paket ve kargo teslimatı.', // Service description
       features: ['30 dk içinde teslimat', 'Sigortalı kargo', '7/24 hizmet'], // Key features
       type: 'courier' // Service type for routing
     },
     {
       icon: Pill, // Icon for pharmacy service
       title: 'Eczaneden Getir', // Service title
-      description: 'İlaç ve sağlık ürünlerini en yakın eczaneden kapınıza kadar getiriyoruz.', // Service description
       features: ['Hızlı teslimat', 'Güvenli taşıma', 'Reçeteli ilaç'], // Key features
       type: 'pharmacy' // Service type for routing
     },
     {
       icon: Car, // Icon for valet service
       title: 'Vale', // Service title
-      description: 'Aracınızı bulunduğu lokasyondan alıp, sizi istediğiniz lokasyona götürüyoruz ve size aracınızı teslim ediyoruz.', // Service description
       features: ['Güvenli park', 'Hızlı teslim', 'Sigortalı hizmet'], // Key features
       type: 'valet' // Service type for routing
     }
@@ -55,7 +52,7 @@ const Services = ({ onServiceClick }) => {
   }
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -63,10 +60,10 @@ const Services = ({ onServiceClick }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-6"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Hizmetlerimiz
+            Tüm Hizmetlerimiz
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             İstanbul'un her noktasında profesyonel hizmet sunuyoruz. 
