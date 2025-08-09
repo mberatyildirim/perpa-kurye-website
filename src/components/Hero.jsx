@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react' // Import useState and useEffect for form state management
 import { motion } from 'framer-motion' // Import motion for animations
-import { Bike, Clock, Shield, MapPin, Phone, Package, Car, Send, Pill, Zap, MessageCircle } from 'lucide-react' // Import additional icons for the form
+import { Bike, Clock, Shield, MapPin, Phone, Package, Car, Send, Pill, Zap, MessageCircle, File, Gift, Box, Package2, ShoppingBag } from 'lucide-react' // Import additional icons for the form including package icons
 import { sendHeroData } from '../utils/googleSheets' // Import Google Sheets function
 
 const Hero = () => {
@@ -178,14 +178,16 @@ const Hero = () => {
     }
 
     // Create WhatsApp message based on service type
-    let message = `Merhaba! ${formData.hizmetTuru} hizmeti almak istiyorum.\n\n`
+    let message = ''
     
     if (formData.hizmetTuru === 'Kurye') {
-      message += `${formData.alinacakSemt}'den ${formData.verilecekSemt}'e ${formData.paketBoyutu} şekilde ${formData.kuryeTipi} kurye hizmeti.`
+      // Extract courier type for proper formatting (Motorlu -> Motorla, Arabalı -> Arabayla)
+      const kuryeTipiFormatted = formData.kuryeTipi === 'Motorlu' ? 'Motorla' : 'Arabayla'
+      message = `Merhaba, ${formData.alinacakSemt}'den ${formData.verilecekSemt}'ne ${kuryeTipiFormatted} ${formData.paketBoyutu} göndermek istiyorum. Fiyat bilgisi alabilir miyim?`
     } else if (formData.hizmetTuru === 'Eczaneden Getir') {
-      message += `İlacın Teslim Edileceği Semt: ${formData.verilecekSemt}`
+      message = `Merhaba, ${formData.verilecekSemt}'ne Eczaneden Getir hizmeti almak istiyorum. Fiyat bilgisi alabilir miyim?`
     } else if (formData.hizmetTuru === 'Vale') {
-      message += `Sizi Alacağımız Semt: ${formData.siziAlacagimizSemt}\nSizi Götüreceğimiz Semt: ${formData.verilecekSemt}\nTarih: ${formData.valeTarih}\nSaat: ${formData.valeSaat}\nAraç Türü: ${formData.kuryeTipi}`
+      message = `Merhaba, ${formData.siziAlacagimizSemt}'den, ${formData.verilecekSemt}'e Vale Hizmeti almak istiyorum.\nTarih: ${formData.valeTarih}\nSaat: ${formData.valeSaat}\nAraç Türü: ${formData.kuryeTipi}`
     }
     
     // Encode message for WhatsApp URL
@@ -424,7 +426,7 @@ const Hero = () => {
                       )}
                     </div>
 
-                    {/* Paket Boyutu */}
+                                        {/* Paket Boyutu */}
                     <div className="space-y-1">
                       <label className="block text-sm font-medium text-white">
                         <Package className="inline h-4 w-4 mr-2" />
@@ -443,10 +445,12 @@ const Hero = () => {
                           errors.paketBoyutu ? 'border-red-400' : 'border-white/30'
                         }`}
                       >
-                        <option value="">Paket boyutu seçin</option>
-                        <option value="Küçük">Küçük</option>
-                        <option value="Orta">Orta</option>
-                        <option value="Büyük">Büyük</option>
+                        <option value="" className="text-gray-800">Paket boyutu seçin</option>
+                        <option value="Zarf / Dosya" className="text-gray-800">Zarf / Dosya - İnce evrak ve belgeler (1 dcm³ veya 1 kg altı)</option>
+                        <option value="Küçük Paket" className="text-gray-800">Küçük Paket - Küçük kutular, hediyelikler (1 dcm³ veya 1 kg'a kadar)</option>
+                        <option value="Orta Paket" className="text-gray-800">Orta Paket - Orta boy poşet/paketler (5 dcm³ veya 5 kg'a kadar)</option>
+                        <option value="Büyük Paket" className="text-gray-800">Büyük Paket - Koli, büyük gönderiler (5 dcm³ veya 5 kg üzeri - ekspres)</option>
+                        <option value="Çanta Aşan Paket" className="text-gray-800">Çanta Aşan Paket - Çantaya sığmayan büyük paketler</option>
                       </select>
                       {errors.paketBoyutu && (
                         <p className="text-red-400 text-sm mt-1">{errors.paketBoyutu}</p>

@@ -22,42 +22,42 @@ const Pricing = () => {
       name: 'GÜMÜŞ',
       price: '2000',
       period: 'paket',
-      description: 'Tüm Siparişlerinize %24 İndirim',
+      description: 'Tüm Siparişlerinize %15 İndirim',
       features: [
         'Paket Tutarı: 2,000 ₺',
         'Siparişin Standart Fiyatı: 1000 ₺',
-        'Siparişin İndirimli Fiyatı: 760 ₺'
+        'Siparişin İndirimli Fiyatı: 850 ₺'
       ],
       popular: false,
-      savings: '24',
+      savings: '15',
       icon: Bike
     },
     {
       name: 'ALTIN',
       price: '5000',
       period: 'paket',
-      description: 'Tüm Siparişlerinize %27 İndirim',
+      description: 'Tüm Siparişlerinize %20 İndirim',
       features: [
         'Paket Tutarı: 5,000 ₺',
         'Siparişin Standart Fiyatı: 1000 ₺',
-        'Siparişin İndirimli Fiyatı: 730 ₺'
+        'Siparişin İndirimli Fiyatı: 800 ₺'
       ],
       popular: true,
-      savings: '27',
+      savings: '20',
       icon: Crown
     },
     {
       name: 'PLATİN',
       price: '10000',
       period: 'paket',
-      description: 'Tüm Siparişlerinize %30 İndirim',
+      description: 'Tüm Siparişlerinize %25 İndirim',
       features: [
         'Paket Tutarı: 10,000 ₺',
         'Siparişin Standart Fiyatı: 1000 ₺',
-        'Siparişin İndirimli Fiyatı: 700 ₺'
+        'Siparişin İndirimli Fiyatı: 750 ₺'
       ],
       popular: false,
-      savings: '30',
+      savings: '25',
       icon: Star
     }
   ]
