@@ -149,7 +149,7 @@ Paket Türü: ${formData.paketTuru}`
     const encodedMessage = encodeURIComponent(message)
     
     // Create WhatsApp URL with phone number
-    const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}`
+    const whatsappUrl = `https://wa.me/905319855356?text=${encodedMessage}`
     
     // Use window.location.href for better mobile compatibility
     if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

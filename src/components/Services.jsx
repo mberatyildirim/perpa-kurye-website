@@ -40,7 +40,7 @@ const Services = ({ onServiceClick }) => {
     // Create WhatsApp message with service information
     const message = `Merhaba! ${service.title} hizmeti hakkında bilgi almak istiyorum.`
     const encodedMessage = encodeURIComponent(message) // Encode message for URL
-    const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}` // WhatsApp URL with phone number
+    const whatsappUrl = `https://wa.me/905319855356?text=${encodedMessage}` // WhatsApp URL with phone number
     
     // Use window.location.href for better mobile compatibility
     if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

@@ -7,7 +7,7 @@ const Pricing = () => {
   const handleWhatsAppClick = (packageName, price, savings) => {
     const message = `Merhaba! ${packageName} paketi hakkında bilgi almak istiyorum. Fiyat: ${price}₺, İndirim: %${savings}`
     const encodedMessage = encodeURIComponent(message)
-    const whatsappUrl = `https://wa.me/905447835455?text=${encodedMessage}`
+    const whatsappUrl = `https://wa.me/905319855356?text=${encodedMessage}`
     
     // Use window.location.href for better mobile compatibility
     if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

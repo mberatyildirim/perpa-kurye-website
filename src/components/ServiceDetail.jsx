@@ -216,7 +216,7 @@ const ServiceDetail = ({ service, onBack }) => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Hemen Sipariş Ver</h3>
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+                  href="https://wa.me/905319855356?text=Kurye%20hizmeti%20almak%20istiyorum."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full btn-primary flex items-center justify-center"
@@ -224,7 +224,7 @@ const ServiceDetail = ({ service, onBack }) => {
                   Kurye Çağır
                 </a>
                 <a
-                  href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+                  href="https://wa.me/905319855356?text=Kurye%20hizmeti%20almak%20istiyorum."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-white text-primary-600 border border-primary-600 hover:bg-primary-50 font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center"

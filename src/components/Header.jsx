@@ -94,7 +94,7 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+              href="https://wa.me/905319855356?text=Kurye%20hizmeti%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center"
@@ -180,7 +180,7 @@ const Header = ({ onNavigation, onServiceClick, onRegionClick }) => {
                 </div>
               ))}
               <a
-                href="https://wa.me/905447835455?text=Kurye%20hizmeti%20almak%20istiyorum."
+                href="https://wa.me/905319855356?text=Kurye%20hizmeti%20almak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center mt-4"
