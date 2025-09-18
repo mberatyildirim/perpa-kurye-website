@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import Pricing from './components/Pricing'
 import About from './components/About'
+import Regions from './components/Regions'
 import Footer from './components/Footer'
 import ServiceDetail from './components/ServiceDetail'
 import RegionDetail from './components/RegionDetail'
@@ -111,6 +112,7 @@ function App() {
             <Services onServiceClick={handleServiceClick} />
             <Pricing />
             <About />
+            <Regions onRegionClick={handleRegionClick} />
           </>
         )
     }

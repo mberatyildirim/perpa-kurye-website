@@ -1,10 +1,17 @@
 import React from 'react' // Import React for component functionality
 import { motion } from 'framer-motion' // Import motion for animations
-import { ShoppingBag, Plane, Truck, Car, Clock, Shield, MapPin, Zap, MessageCircle } from 'lucide-react' // Import icons for services
+import { ShoppingBag, Plane, Truck, Car, Clock, Shield, MapPin, Zap, MessageCircle, Pill } from 'lucide-react' // Import icons for services including Pill for pharmacy
 
 const Services = ({ onServiceClick }) => {
-  // Define the four main services with their details
+  // Define the five main services with their details
   const services = [
+    {
+      icon: Pill, // Icon for pharmacy delivery service
+      title: 'Eczaneden Getir', // Service title
+      description: 'İlaçlarınızı eczaneden alıp kapınıza getiriyoruz. Reçeteli ve reçetesiz ilaçlar için güvenli ve hızlı teslimat hizmeti.', // Service description
+      features: ['Reçeteli ilaç teslimatı', 'Güvenli taşıma', 'Hızlı teslimat'], // Key features
+      type: 'pharmacy' // Service type for identification
+    },
     {
       icon: ShoppingBag, // Icon for market delivery service
       title: 'Marketten Getir', // Service title
@@ -71,16 +78,18 @@ const Services = ({ onServiceClick }) => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="card group hover:scale-105 transition-transform duration-300 w-full text-left overflow-hidden flex flex-col h-full"
-            >
+        <div className="space-y-8 mb-20">
+          {/* First Row - 3 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.slice(0, 3).map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="card group hover:scale-105 transition-transform duration-300 text-left overflow-hidden flex flex-col h-full w-full"
+              >
               {/* Service Image */}
               <div className="relative h-32 mb-6 overflow-hidden rounded-lg">
                 <img 
@@ -125,7 +134,68 @@ const Services = ({ onServiceClick }) => {
                 </button>
               </div>
             </motion.div>
-          ))}
+            ))}
+          </div>
+
+          {/* Second Row - 2 Cards Centered */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+              {services.slice(3, 5).map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: (index + 3) * 0.2 }}
+                  viewport={{ once: true }}
+                  className="card group hover:scale-105 transition-transform duration-300 text-left overflow-hidden flex flex-col h-full w-full"
+                >
+                  {/* Service Image */}
+                  <div className="relative h-32 mb-6 overflow-hidden rounded-lg">
+                    <img 
+                      src={`/images/services/${service.title.toLowerCase().replace(/[çğıöşü]/g, (match) => {
+                        const replacements = { 'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u' }
+                        return replacements[match]
+                      }).replace(/\s+/g, '-')}.jpg`}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-white/90 text-primary-600 rounded-full">
+                        <service.icon className="h-6 w-6" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="px-6 pb-6 flex flex-col flex-grow">
+                    <div className="flex-grow">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.description}</p>
+                      
+                      {/* Features List */}
+                      <ul className="space-y-2 mb-4">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                            <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mr-2"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* WhatsApp Button - Green with WhatsApp icon */}
+                    <button
+                      onClick={() => handleServiceClick(service)}
+                      className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 mt-6"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      <span>Bilgi Al</span>
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Features Section */}
