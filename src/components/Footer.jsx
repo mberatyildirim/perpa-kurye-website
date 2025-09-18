@@ -61,7 +61,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://wa.me/905555745356"
+                href="https://wa.me/905319855356"
                 className="bg-green-600 hover:bg-green-700 p-3 rounded-full transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -137,23 +137,7 @@ const Footer = () => {
                   <Phone className="h-5 w-5 text-primary-400" />
                   <div>
                     <a href="tel:05555745356" className="text-gray-300 hover:text-white transition-colors duration-200">
-                      (0555) 574 53 56
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-primary-400" />
-                  <div>
-                    <a href="tel:05325784634" className="text-gray-300 hover:text-white transition-colors duration-200">
-                      (0532) 578 46 34
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-primary-400" />
-                  <div>
-                    <a href="tel:05325361915" className="text-gray-300 hover:text-white transition-colors duration-200">
-                      (0532) 536 19 15
+                      (0531) 985 53 56
                     </a>
                   </div>
                 </div>
