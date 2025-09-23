@@ -6,6 +6,21 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perpa Kurye - Daima Zamanında</title>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        if (path.length > 1 && path.charAt(path.length - 1) === '/') {
+          path = path.slice(0, -1);
+        }
+        var aliases = {
+          '/anasayfa1': true,
+          '/anasayfa2': true
+        };
+        if (aliases[path]) {
+          window.location.replace('/');
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
