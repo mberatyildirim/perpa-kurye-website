@@ -173,7 +173,7 @@ const RegionDetail = ({ region, onBack }) => {
         <ul>
           <li><strong>Belge ve Evrak Teslimatı:</strong> Resmi belgeler, sözleşmeler ve önemli evraklarınızı güvenle teslim ediyoruz.</li>
           <li><strong>Paket Teslimatı:</strong> Küçük, orta ve büyük boyutlu paketlerinizi hızlıca ulaştırıyoruz.</li>
-          <li><strong>Hava Kargo:</strong> Acil gönderileriniz için hızlı hava kargo hizmeti.</li>
+          <li><strong>Uçak Kargo:</strong> Acil gönderileriniz için hızlı uçak kargo hizmeti.</li>
           <li><strong>Özel Araç Filosu:</strong> Büyük ve ağır paketler için özel araçlarımız.</li>
         </ul>
         

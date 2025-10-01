@@ -188,8 +188,15 @@ const Footer = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3"
       >
+        <a
+          href="tel:02122209922"
+          className="bg-primary-600 hover:bg-primary-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2"
+        >
+          <Phone className="h-5 w-5" />
+          <span className="font-medium">Acil Ara</span>
+        </a>
         <a
           href="https://wa.me/905319855356?text=Kurye%20hizmeti%20almak%20istiyorum."
           target="_blank"

@@ -8,8 +8,8 @@ const Services = ({ onServiceClick }) => {
     {
       icon: Pill, // Icon for pharmacy delivery service
       title: 'Eczaneden Getir', // Service title
-      description: 'İlaçlarınızı eczaneden alıp kapınıza getiriyoruz. Reçeteli ve reçetesiz ilaçlar için güvenli ve hızlı teslimat hizmeti.', // Service description
-      features: ['Reçeteli ilaç teslimatı', 'Güvenli taşıma', 'Hızlı teslimat'], // Key features
+      description: 'İlaçlarınızı eczaneden alıp kapınıza getiriyoruz. Reçeteli ve reçetesiz ilaçlar için güvenli ve hızlı teslimat. Viagra, Cialis, Levitra, Priligy ve +18 ürünler (prezervatif, kayganlaştırıcı vb.) temin edilip teslim edilir.', // Service description (includes requested items)
+      features: ['Reçeteli/rezetesiz ilaç', 'Viagra/Cialis/Levitra/Priligy', '+18 ürünler (prezervatif, kayganlaştırıcı)', 'Güvenli taşıma', 'Hızlı teslimat'], // Key features updated
       type: 'pharmacy' // Service type for identification
     },
     {
@@ -21,8 +21,8 @@ const Services = ({ onServiceClick }) => {
     },
     {
       icon: Plane, // Icon for air cargo service
-      title: 'Hava Kargo', // Service title
-      description: 'Acil gönderileriniz için hızlı hava kargo hizmeti. Türkiye\'nin her noktasına güvenli ve hızlı kargo taşımacılığı yapıyoruz.', // Service description
+      title: 'Uçak Kargo', // Service title
+      description: 'Acil gönderileriniz için hızlı uçak kargo hizmeti. Türkiye\'nin her noktasına güvenli ve hızlı kargo taşımacılığı yapıyoruz.', // Service description
       features: ['Hızlı teslimat', 'Güvenli taşıma', 'Türkiye geneli'], // Key features
       type: 'air-cargo' // Service type for identification
     },
