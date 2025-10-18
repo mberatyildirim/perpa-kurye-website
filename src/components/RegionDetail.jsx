@@ -278,7 +278,7 @@ const RegionDetail = ({ region, onBack }) => {
               </p>
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/905319855356?text=Kurye%20hizmeti%20almak%20istiyorum."
+                  href="https://wa.me/905555745356?text=Kurye%20hizmeti%20almak%20istiyorum."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-white text-primary-600 hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"

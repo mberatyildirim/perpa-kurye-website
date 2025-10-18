@@ -61,7 +61,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://wa.me/905319855356"
+                href="https://wa.me/905555745356"
                 className="bg-green-600 hover:bg-green-700 p-3 rounded-full transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -198,7 +198,7 @@ const Footer = () => {
           <span className="font-medium">Acil Ara</span>
         </a>
         <a
-          href="https://wa.me/905319855356?text=Kurye%20hizmeti%20almak%20istiyorum."
+          href="https://wa.me/905555745356?text=Kurye%20hizmeti%20almak%20istiyorum."
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2"

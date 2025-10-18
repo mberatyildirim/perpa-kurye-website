@@ -35,7 +35,7 @@ const Regions = ({ onRegionClick }) => {
   const handleRegionClick = (region) => {
     const message = `Merhaba! ${region.name} hizmeti hakkında bilgi almak istiyorum.`
     const encodedMessage = encodeURIComponent(message)
-    const whatsappUrl = `https://wa.me/905319855356?text=${encodedMessage}`
+    const whatsappUrl = `https://wa.me/905555745356?text=${encodedMessage}`
     
     // Use window.location.href for better mobile compatibility
     if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
